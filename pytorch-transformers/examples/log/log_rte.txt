@@ -1,0 +1,410 @@
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8628158844765343
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.9061371841155235
+***** Eval results  *****
+acc = 0.9061371841155235
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.9205776173285198
+***** Eval results  *****
+acc = 0.9169675090252708
+***** Eval results  *****
+acc = 0.9097472924187726
+***** Eval results  *****
+acc = 0.9169675090252708
+***** Eval results  *****
+acc = 0.9133574007220217
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8592057761732852
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.9061371841155235
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8664259927797834
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.855595667870036
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8628158844765343
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.9133574007220217
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8592057761732852
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8664259927797834
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.855595667870036
+***** Eval results  *****
+acc = 0.855595667870036
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.855595667870036
+***** Eval results  *****
+acc = 0.8628158844765343
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8592057761732852
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8628158844765343
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8664259927797834
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8592057761732852
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8989169675090253
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8628158844765343
+***** Eval results  *****
+acc = 0.8736462093862816
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.9061371841155235
+***** Eval results  *****
+acc = 0.9061371841155235
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.9025270758122743
+***** Eval results  *****
+acc = 0.9205776173285198
+***** Eval results  *****
+acc = 0.9169675090252708
+***** Eval results  *****
+acc = 0.9097472924187726
+***** Eval results  *****
+acc = 0.9169675090252708
+***** Eval results  *****
+acc = 0.9133574007220217
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8953068592057761
+***** Eval results  *****
+acc = 0.8700361010830325
+***** Eval results  *****
+acc = 0.8664259927797834
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8772563176895307
+***** Eval results  *****
+acc = 0.8808664259927798
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8916967509025271
+***** Eval results  *****
+acc = 0.8880866425992779
+***** Eval results  *****
+acc = 0.8844765342960289
+***** Eval results  *****
+acc = 0.8844765342960289

@@ -1,0 +1,10 @@
+***** Eval results 3-0-3 *****
+acc= 0.9125
+***** Eval results 3-1-4 *****
+acc= 0.875
+***** Eval results 3-2-3 *****
+acc= 0.8375
+***** Eval results 3-3-4 *****
+acc= 0.85
+***** Eval results 3-4-5 *****
+acc= 0.9125
