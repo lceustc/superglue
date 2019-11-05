@@ -1,7 +1,7 @@
 export GLUE_DIR=/data/lce/pytorch-transformers/data
 export TASK_NAME=COPA
 
-for SEED in 3 7 42 50 99
+for SEED in  99
 do
 
 CUDA_VISIBLE_DEVICES=7 python cv_cb.py \
@@ -10,7 +10,7 @@ CUDA_VISIBLE_DEVICES=7 python cv_cb.py \
     --task_name=$TASK_NAME \
     --evaluate_during_training \
     --do_train \
-    --data_dir $GLUE_DIR/$TASK_NAME/ \
+    --data_dir $GLUE_DIR/$TASK_NAME/COPA-eda_9-alpha_.1-premise \
     --max_seq_length 32 \
     --per_gpu_eval_batch_size=4  \
     --per_gpu_train_batch_size=4   \
