@@ -165,13 +165,13 @@ class CrossEntropyLossSoft(nn.Module):
 class Mixout(object):
     def __init__(self, pmodel_path, p=0.7):
         self.p = p
-        self.grad = {}
-        self.old_grad = {}
+        self.param = {}
+        self.old_param = {}
         self.pmodel_path = pmodel_path
-        static_dic = torch.load(self.pmodel_path)
+        static_dic = torch.load(self.pmodel_path+"/pytorch_model.bin")
         for k, v in static_dic.items():
             if "classifier" not in k:
-                self.old_grad[k] = v
+                self.old_param[k] = v
         del static_dic;
         import gc;
         gc.collect();
@@ -179,20 +179,20 @@ class Mixout(object):
 
     def restore(self, model):
         for k, v in model.named_parameters():
-            if k in self.grad.keys():
+            if k in self.param.keys():
                 v.data.mul_(0)
-                v.data.add_(self.grad[k])
-        self.grad = {}
+                v.data.add_(self.param[k])
+        self.param = {}
 
     def replace(self, model):
         for k, v in model.named_parameters():
-            if k in self.old_grad.keys():
-                self.grad[k] = v
-                new_grad_p = torch.zeros_like(v) + self.p
-                new_grad_p = torch.bernoulli(new_grad_p)
-                old_grad_p = torch.ones_like(v) - new_grad_p
-                v.data.mul_(new_grad_p)
-                v.data.add_(old_grad_p * self.old_grad[k])
+            if k in self.old_param.keys():
+                self.param[k] = v
+                p_new = torch.zeros_like(v) + (1-self.p)
+                new_bernoulli = torch.bernoulli(p_new)
+                old_bernoulli = torch.ones_like(v) - new_bernoulli
+                v.data.mul_(new_bernoulli)
+                v.data.add_(old_bernoulli*self.old_param[k].cuda())
 
 
 def get_module(model):

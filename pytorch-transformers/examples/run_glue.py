@@ -272,9 +272,9 @@ def train(args, train_dataset, model, tokenizer):
             if 0 < args.max_steps < global_step:
                 epoch_iterator.close()
                 break
-        # #!!!!!!!!!!!!!!!!
-        # results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
-        # #!!!!!!!!!!!!!!!!!
+        #!!!!!!!!!!!!!!!!
+        results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
+        #!!!!!!!!!!!!!!!!!
 
         if 0 < args.max_steps < global_step:
             train_iterator.close()
@@ -290,7 +290,7 @@ def evaluate(args, model, tokenizer, prefix=""):
     # Loop to handle MNLI double evaluation (matched, mis-matched)
     eval_task_names = ("mnli", "mnli-mm") if args.task_name == "mnli" else (args.task_name,)
     eval_outputs_dirs = (args.output_dir, args.output_dir + '-MM') if args.task_name == "mnli" else (args.output_dir,)
-    f = open("./copa_swag.txt","a")
+    f = open("./cv_mnli_mixout.txt","a")
     results = {}
     for eval_task, eval_output_dir in zip(eval_task_names, eval_outputs_dirs):
         eval_dataset = load_and_cache_examples(args, eval_task, tokenizer, evaluate=True)
@@ -343,10 +343,10 @@ def evaluate(args, model, tokenizer, prefix=""):
         results.update(result)
 
         logger.info("***** Eval results {} *****".format(prefix))
-        # f.write("***** Eval results {} *****\n".format(prefix))
+        f.write("***** Eval results {} *****\n".format(prefix))
         for key in sorted(result.keys()):
             logger.info("  %s = %s", key, str(result[key]))
-            # f.write("%s = %s\n" % (key, str(result[key])))
+            f.write("%s = %s\n" % (key, str(result[key])))
     f.close()
 
     return results

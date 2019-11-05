@@ -97,6 +97,15 @@ def gen_eda(data, task, alpha, num_aug, args):
                 for i, q in enumerate(augmented_q):
                     augmented_d[i]["question"] = q
 
+        elif args.task == 'copa':
+            premise = d['premise']
+            aug_sentences = eda(premise, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha,
+                                num_aug=num_aug)
+            
+
+
+            pass
+
         else:
             raise NotImplementedError("%s is not implemented." % task)
 
@@ -170,6 +179,19 @@ def gen_synonym_replacement(data, task, alpha, num_aug, args):
                 for i, q in enumerate(augmented_questions):
                     augmented_d[i]["question"] = q
 
+
+        elif args.task =='copa':
+            premise = d['premise']
+            choice1 = d['choice1']
+            choice2 = d['choice2']
+            aug_sentences = eda(premise, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha,
+                                          num_aug=num_aug)
+            pass
+
+
+
+
+            return None
         else:
             raise NotImplementedError("%s is not implemented." % task)
 
