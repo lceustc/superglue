@@ -219,7 +219,12 @@ def evaluate(args, model, tokenizer,idx,prefix=""):
     # Loop to handle MNLI double evaluation (matched, mis-matched)
     eval_task_names = ("mnli", "mnli-mm") if args.task_name == "mnli" else (args.task_name,)
     eval_outputs_dirs = (args.output_dir, args.output_dir + '-MM') if args.task_name == "mnli" else (args.output_dir,)
-    f = open("/".join(args.output_dir.split("/")[:-1])+"/result.txt","a")
+
+    path = "/".join(args.output_dir.split("/")[:-1])
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+    f = open(path+"/result.txt","a")
     results = {}
     for eval_task, eval_output_dir in zip(eval_task_names, eval_outputs_dirs):
         eval_dataset = load_and_cache_examples(args, eval_task, tokenizer,idx,evaluate=True)
