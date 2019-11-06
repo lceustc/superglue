@@ -34,18 +34,18 @@ file_list = [
 #         # data['idx'] = int(data['idx'])+1
 #         # print(data['idx'])
 #         break
-#     break
-for i in file_list:
-    t = os.path.join(i,"train.jsonl")
-    with open(t,'r') as f:
-        tmp = f.readlines()
-    op = os.path.join(i,"train.tsv")
-    g = open(op,'w')
-    for j in range(len(tmp)):
-        data = json.loads(tmp[j])
-        if data['idx']>249:
-            data['idx'] +=1
-        g.writelines(str(data['premise'])+'\t'+str(data['hypothesis'])+'\t'+str(data['label']+'\t'+str(data['idx'])+'\n'))
+# #     break
+# for i in file_list:
+#     t = os.path.join(i,"train.jsonl")
+#     with open(t,'r') as f:
+#         tmp = f.readlines()
+#     op = os.path.join(i,"train.tsv")
+#     g = open(op,'w')
+#     for j in range(len(tmp)):
+#         data = json.loads(tmp[j])
+#         if data['idx']>249:
+#             data['idx'] +=1
+#         g.writelines(str(data['premise'])+'\t'+str(data['hypothesis'])+'\t'+str(data['label']+'\t'+str(data['idx'])+'\n'))
 
 # tmp = pd.read_csv("./train2.tsv",sep='\t',header=0)
 # # print(tmp.iloc[1901,[-1]])
@@ -59,3 +59,11 @@ for i in file_list:
 # # print(tmp['idx'])
 # tmp = DataFrame(tmp)
 # tmp.to_csv("./temp.tsv",sep='\t',header=False,index=False)
+
+with  open("./train.jsonl","r") as f:
+    lines = f.readlines()
+    for line in lines:
+        line = json.loads(line)
+        l1 = len(line["premise"].split(" "))
+        l2 = len(line["hypothesis"].split(" "))
+        print(l1,l2)

@@ -1,0 +1,1000 @@
+My body cast a shadow over the grass.	The sun was rising.	The grass was cut.	cause	0	0	
+The garden looked well-groomed.	The grass was cut.	The sun was rising.	cause	0	1	
+The woman tolerated her friend's difficult behavior.	The woman knew her friend was going through a hard time.	The woman felt that her friend took advantage of her kindness.	cause	0	2	
+The woman did not tolerate her friend's difficult behavior anymore.	The woman felt that her friend took advantage of her kindness.	The woman knew her friend was going through a hard time.	cause	0	3	
+The women met for coffee.	The cafe reopened in a new location.	They wanted to catch up with each other.	cause	1	4	
+The women were surprised.	The cafe reopened in a new location.	They wanted to catch up with each other.	cause	0	5	
+The runner wore shorts.	She planned to run along the beach.	The forecast predicted high temperatures.	cause	1	6	
+The runner stretched.	She planned to run along the beach.	The forecast predicted high temperatures.	cause	0	7	
+The guests of the party hid behind the couch.	It was a birthday party.	It was a surprise party.	cause	1	8	
+The guests of the party brought candles.	It was a birthday party.	It was a surprise party.	cause	0	9	
+The politician lost the election.	No one voted for him.	He ran negative campaign ads.	cause	0	10	
+The politician won the election.	No one voted for him.	He ran negative campaign ads.	cause	1	11	
+The stain came out of the shirt.	I patched the shirt.	I bleached the shirt.	cause	1	12	
+The shirt did not have a hole anymore.	I patched the shirt.	I bleached the shirt.	cause	0	13	
+The man got a discount on his groceries.	He greeted the cashier.	He used a coupon.	cause	1	14	
+The man looked friendly.	He used a coupon.	He greeted the cashier.	cause	1	15	
+The physician misdiagnosed the patient.	The patient disclosed confidential information to the physician.	The patient filed a malpractice lawsuit against the physician.	effect	1	16	
+The patient was a close friend of the physician.	The patient disclosed confidential information to the physician.	The patient filed a malpractice lawsuit against the physician.	effect	0	17	
+The customer filed a complaint with the store manager.	The sales associate acted rude to the customer.	The sales associate undercharged the customer.	cause	0	18	
+The sales associate sent another invoice to the customer.	The sales associate undercharged the customer.	The sales associate acted rude to the customer.	cause	0	19	
+The woman repaired her faucet.	The faucet was leaky.	The faucet was turned off.	cause	0	20	
+The woman could not wash her hands.	The faucet was leaky.	The faucet was turned off.	cause	1	21	
+The elderly woman suffered a stroke.	The woman's daughter came over to clean her house.	The woman's daughter moved in to take care of her.	effect	1	22	
+The elderly woman made a phone call.	The woman's daughter came over to clean her house.	The woman's daughter moved in to take care of her.	effect	0	23	
+The pond froze over for the winter.	People brought boats to the pond.	People skated on the pond.	effect	1	24	
+The frozen pond thawed in the spring.	People brought boats to the pond.	People skated on the pond.	effect	0	25	
+The offender violated parole.	She was sent back to jail.	She stole money from a church.	effect	0	26	
+The offender was poor.	She was sent back to jail.	She stole money from a church.	effect	1	27	
+I poured water on my sleeping friend.	My friend awoke.	My friend snored.	effect	0	28	
+I made my friend very tired.	My friend awoke.	My friend snored.	effect	1	29	
+The girl gasped.	Her friend stuck an ice cube down her back.	Her friend gave her a pat on the back.	cause	0	30	
+The girl smiled.	Her friend stuck an ice cube down her back.	Her friend gave her a pat on the back.	cause	1	31	
+The shirt shrunk.	I put it in the dryer.	I poured bleach on it.	cause	0	32	
+The shirt became clean.	I poured bleach on it.	I put it in the dryer.	cause	0	33	
+It got dark outside.	Snowflakes began to fall from the sky.	The moon became visible in the sky.	effect	1	34	
+It got cold outside.	Snowflakes began to fall from the sky.	The moon became visible in the sky.	effect	0	35	
+I hung up the phone.	The caller said goodbye to me.	The caller identified himself to me.	cause	0	36	
+I recognized the caller.	The caller identified himself to me.	The caller said goodbye to me.	cause	0	37	
+The woman's ring slipped off in the shower.	The woman polished the ring.	The ring went down the drain.	effect	1	38	
+The woman's ring got dirty.	The ring went down the drain.	The woman polished the ring.	effect	1	39	
+The girl received a trophy.	She won a spelling bee.	She made a new friend.	cause	0	40	
+The girl was not lonely anymore.	She made a new friend.	She won a spelling bee.	cause	0	41	
+The woman's date wanted to look like a gentleman.	He opened the door for her.	He asked her if she liked sushi.	effect	0	42	
+The woman's date wanted to have Japanese cuisine.	He asked her if she liked sushi.	He opened the door for her.	effect	0	43	
+The farmland needed irrigation.	A flood occurred.	A canal was constructed.	effect	1	44	
+The farmland got heavy rain.	A canal was constructed.	A flood occurred.	effect	1	45	
+The host cancelled the party.	She worried she would catch the flu.	She was certain she had the flu.	cause	1	46	
+The woman got vaccinated.	She was certain she had the flu.	She worried she would catch the flu.	cause	1	47	
+The woman gave the man her phone number.	She was attracted to him.	She was repulsed by him.	cause	0	48	
+The woman ignored the man.	She was attracted to him.	She was repulsed by him.	cause	1	49	
+The skydiver glided safely to the ground.	She opened her parachute.	She jumped out of the plane.	cause	0	50	
+The skydiver started to fall down.	She opened her parachute.	She jumped out of the plane.	cause	1	51	
+The toddler became cranky.	Her mother fixed her hair into pigtails.	Her mother put her down for a nap.	effect	1	52	
+The toddler joined a baby pageant.	Her mother fixed her hair into pigtails.	Her mother put her down for a nap.	effect	0	53	
+The child became immune to the disease.	He received the vaccine for the disease.	He avoided exposure to the disease.	cause	0	54	
+The child was not vaccinated but did not get the disease.	He received the vaccine for the disease.	He avoided exposure to the disease.	cause	1	55	
+The grape juice fermented.	The juice evaporated.	The juice turned to wine.	effect	1	56	
+The grape juice was boiled.	The juice evaporated.	The juice turned to wine.	effect	0	57	
+The friends' debate dragged on interminably.	The friends were splitting hairs.	The friends saw eye to eye.	cause	0	58	
+The friends did not have a debate.	The friends saw eye to eye.	The friends were splitting hairs.	cause	0	59	
+The woman hummed to herself.	She was nervous.	She was in a good mood.	cause	1	60	
+The woman trembled.	She was in a good mood.	She was nervous.	cause	1	61	
+The man hated his new haircut.	He grew a beard.	He wore a hat.	effect	1	62	
+The man hated the shape of his chin.	He wore a hat.	He grew a beard.	effect	1	63	
+The police aimed their weapons at the fugitive.	The fugitive fell to the ground.	The fugitive dropped his gun.	effect	1	64	
+The police shot the fugitive.	The fugitive fell to the ground.	The fugitive dropped his gun.	effect	0	65	
+The patient was dehydrated.	The nurse gave him an IV.	The nurse tested his reflexes.	effect	0	66	
+The patient said his leg felt numb.	The nurse tested his reflexes.	The nurse gave him an IV.	effect	0	67	
+The girl found the missing puzzle piece.	She took apart the puzzle.	She completed the puzzle.	effect	1	68	
+The girl was angry.	She took apart the puzzle.	She completed the puzzle.	effect	0	69	
+The man urgently leaped out of bed.	He wanted to iron his pants before work.	He wanted to shut off the alarm clock.	cause	1	70	
+The man got up earlier.	He wanted to shut off the alarm clock.	He wanted to iron his pants before work.	cause	1	71	
+The papers were disorganized.	I made photocopies of them.	I put them into alphabetical order.	effect	1	72	
+The papers were important.	I put them into alphabetical order.	I made photocopies of them.	effect	1	73	
+The woman won the lottery.	She bought a yacht.	She joined a church.	effect	0	74	
+The woman felt guilty.	She joined a church.	She bought a yacht.	effect	0	75	
+The seamstress pushed the threaded needle into the fabric.	The thread went through the fabric.	The thread wrapped around the needle.	effect	0	76	
+The seamstress guided the thread through the eye of the needle.	The thread went through the fabric.	The thread wrapped around the needle.	effect	1	77	
+The woman hired a lawyer.	She decided to run for office.	She decided to sue her employer.	cause	1	78	
+The woman hired a public relations consultant.	She decided to run for office.	She decided to sue her employer.	cause	0	79	
+The tenant misplaced his keys to his apartment.	His landlord unlocked the door.	His landlord repaired the door.	effect	0	80	
+The tenant broke the door of his apartment.	His landlord repaired the door.	His landlord unlocked the door.	effect	0	81	
+My favorite song came on the radio.	I covered my ears.	I sang along to it.	effect	1	82	
+An awful song came on the radio.	I covered my ears.	I sang along to it.	effect	0	83	
+The executive decided not to hire the applicant.	The applicant had experience for the job.	The applicant failed a background check.	cause	1	84	
+The executive decided to hire the applicant.	The applicant failed a background check.	The applicant had experience for the job.	cause	1	85	
+The man's eye became infected.	He went blind.	He put on glasses.	effect	0	86	
+The man had bad eyesight.	He put on glasses.	He went blind.	effect	0	87	
+The bird couldn't fly.	It migrated for the winter.	It injured its wing.	cause	1	88	
+The bird flew south.	It injured its wing.	It migrated for the winter.	cause	1	89	
+The girl made a wish.	She saw a black cat.	She saw a shooting star.	cause	1	90	
+The girl had bad luck.	She saw a black cat.	She saw a shooting star.	cause	0	91	
+The woman shivered as she got out the pool.	She wrapped herself in a towel.	She poured herself some lemonade.	effect	0	92	
+The woman was thirsty after she jogged.	She poured herself some lemonade.	She wrapped herself in a towel.	effect	0	93	
+The nurse prepared the needle for the patient's injection.	The patient tensed up.	The patient bled.	effect	0	94	
+The nurse made a mistake during the patient's injection.	The patient bled.	The patient tensed up.	effect	0	95	
+The man threw out the bread.	It was fresh.	It was stale.	cause	1	96	
+The man liked the bread.	It was stale.	It was fresh.	cause	1	97	
+The children knocked over a lamp.	They had a pillow fight.	They jumped on the bed.	cause	0	98	
+The children bumped their heads on the ceiling.	They jumped on the bed.	They had a pillow fight.	cause	0	99	
+I drank from the water fountain.	I was thirsty.	I felt nauseous.	cause	0	100	
+I went to the toilet.	I was thirsty.	I felt nauseous.	cause	1	101	
+The homeowners disliked their nosy neighbors.	They built a fence around their property.	They hosted a barbeque in their backyard.	effect	0	102	
+The homeowners liked their neighbors.	They built a fence around their property.	They hosted a barbeque in their backyard.	effect	1	103	
+The bodybuilder lifted weights.	The gym closed.	Her muscles became fatigued.	effect	1	104	
+Bodybuilding fell out of fashion.	Her muscles became fatigued.	The gym closed.	effect	1	105	
+The cook stirred the ingredients in the bowl.	The ingredients blended together.	The ingredients melted.	effect	0	106	
+The cook boiled the ingredients in the bowl.	The ingredients melted.	The ingredients blended together.	effect	0	107	
+The man signed the document.	The transaction was voided.	The transaction became official.	effect	1	108	
+The man returned the document.	The transaction was voided.	The transaction became official.	effect	0	109	
+The police officer dropped the gun.	The gun went off.	The gun recoiled.	effect	0	110	
+The police officer shot the gun.	The gun went off.	The gun recoiled.	effect	1	111	
+The woman felt compelled to help someone in need.	She donated blood.	She wrote a poem.	effect	0	112	
+The woman felt compelled to express herself.	She donated blood.	She wrote a poem.	effect	1	113	
+The woman felt lonely.	She renovated her kitchen.	She adopted a cat.	effect	1	114	
+The woman felt creative.	She renovated her kitchen.	She adopted a cat.	effect	0	115	
+I rubbed sandpaper on the wood.	The wood became smooth.	The wood became sticky.	effect	0	116	
+I spilled glue on the wood.	The wood became sticky.	The wood became smooth.	effect	0	117	
+The crowd gave the band a standing ovation.	The band reappeared on the stage.	The band signed autographs.	effect	0	118	
+The crowd waited for the rock band at the airport.	The band signed autographs.	The band reappeared on the stage.	effect	0	119	
+The man threw his empty can onto the street.	He was fined for littering.	He was jumped from behind.	effect	0	120	
+The man walked alone on the street.	He was fined for littering.	He was jumped from behind.	effect	1	121	
+My stomach growled.	I was full from breakfast.	I forgot to eat breakfast.	cause	1	122	
+My stomach was heavy.	I was full from breakfast.	I forgot to eat breakfast.	cause	0	123	
+The boaters set off a flare.	Their boat drifted to shore.	Their boat was rescued.	effect	1	124	
+The boaters caught a nice current.	Their boat drifted to shore.	Their boat was rescued.	effect	0	125	
+The man removed his coat.	He entered the house.	He loosened his tie.	cause	0	126	
+The man could breathe better.	He loosened his tie.	He entered the house.	cause	0	127	
+The family took their dog to the veterinarian.	The dog injured his paw.	The dog chewed on a bone.	cause	0	128	
+The dog broke his teeth.	The dog injured his paw.	The dog chewed on a bone.	cause	1	129	
+The woman dangled the biscuit above the dog.	The dog jumped up.	The dog scratched its fur.	effect	0	130	
+The dog had lice.	The dog jumped up.	The dog scratched its fur.	effect	1	131	
+I learned how to play the board game.	My friend got the rules wrong.	My friend explained the rules to me.	cause	1	132	
+The board game ended in a disaster.	My friend explained the rules to me.	My friend got the rules wrong.	cause	1	133	
+The man went away for the weekend.	He wanted to relax.	He felt content.	cause	0	134	
+The man did not need to buy more things.	He felt content.	He wanted to relax.	cause	0	135	
+The shop was closed.	The shop was undergoing renovation.	The owner was helping customers.	cause	0	136	
+The shop was very popular.	The shop was undergoing renovation.	The owner was helping customers.	cause	1	137	
+The boy tuned the radio.	The station was playing rock music.	The station was coming in with static.	cause	1	138	
+The boy listened to the radio.	The station was playing rock music.	The station was coming in with static.	cause	0	139	
+The terrorist set off the bomb.	The bomb was deactivated.	The bomb exploded.	effect	1	140	
+The police found the bomb.	The bomb was deactivated.	The bomb exploded.	effect	0	141	
+The police handcuffed the suspect.	The police called for backup.	The suspect resisted arrest.	cause	1	142	
+The police was hit by the suspect.	The suspect resisted arrest.	The police called for backup.	cause	1	143	
+The authorities vowed to protect the identity of the crime victim.	The victim struggled to recall details about the crime.	They withheld the victim's name from the public.	effect	1	144	
+The authorities brought on the case many years later.	They withheld the victim's name from the public.	The victim struggled to recall details about the crime.	effect	1	145	
+The man's clothes fit loosely.	He bought them on sale.	He lost weight.	cause	1	146	
+The man's clothes were cheap.	He lost weight.	He bought them on sale.	cause	1	147	
+The clock stopped ticking.	I took extra time to get ready.	The clock showed the wrong time.	effect	1	148	
+The time was earlier than I thought.	The clock showed the wrong time.	I took extra time to get ready.	effect	1	149	
+The man closed the umbrella.	He got out of the car.	He approached the building.	cause	1	150	
+The man opened the umbrella.	He approached the building.	He got out of the car.	cause	1	151	
+The man craved a cigarette.	His family urged him to quit smoking.	He was addicted to nicotine.	cause	1	152	
+The man threw his cigarettes away.	He was addicted to nicotine.	His family urged him to quit smoking.	cause	1	153	
+The man dropped food on the floor.	His dog ran over to eat the food.	His dog jumped up on him.	effect	0	154	
+The man had a cookie in his hand.	His dog ran over to eat the food.	His dog jumped up on him.	effect	1	155	
+The girl was angry with her friend.	The girl told a secret to her friend.	The girl spread a rumor about her friend.	effect	1	156	
+The girl trusted her friend.	The girl told a secret to her friend.	The girl spread a rumor about her friend.	effect	0	157	
+The fugitive hid from the police.	The fugitive remained at large.	The police dropped the case.	effect	0	158	
+The fugitive was shot by the police.	The police dropped the case.	The fugitive remained at large.	effect	0	159	
+I tipped the bottle.	The liquid in the bottle poured out.	The liquid in the bottle froze.	effect	0	160	
+I put the bottle into a freezer.	The liquid in the bottle froze.	The liquid in the bottle poured out.	effect	0	161	
+The woman spoke with a foreign accent.	She came from a wealthy family.	She migrated from another country.	cause	1	162	
+The woman was rich.	She came from a wealthy family.	She migrated from another country.	cause	0	163	
+The boy's mouth stung.	He blew out the candle.	He ate a pepper.	cause	1	164	
+Smoke got in the boy's eyes.	He blew out the candle.	He ate a pepper.	cause	0	165	
+I finished a page of the book.	I turned to the next page.	I ripped out the next page.	effect	0	166	
+I got angry while reading the book.	I ripped out the next page.	I turned to the next page.	effect	0	167	
+The service at the restaurant was slow.	The restaurant was crowded.	There were many empty tables.	cause	0	168	
+The service at the restaurant was quick.	There were many empty tables.	The restaurant was crowded.	cause	0	169	
+I saw a woman getting robbed on the street.	I called 911.	I hailed a cab.	effect	0	170	
+I was late for the meeting.	I hailed a cab.	I called 911.	effect	0	171	
+My stomach hurt.	I ate birthday cake.	I jogged on the treadmill.	cause	0	172	
+My feet hurt.	I jogged on the treadmill.	I ate birthday cake.	cause	0	173	
+I put my plate in the sink.	I finished eating.	I skipped dinner.	cause	0	174	
+I didn't have to do the dishes.	I finished eating.	I skipped dinner.	cause	1	175	
+The man closed the book.	It provoked him to think.	He finished reading it.	cause	1	176	
+The man liked the book.	He finished reading it.	It provoked him to think.	cause	1	177	
+The boy read the novel aloud to his grandfather.	His grandfather was deaf.	His grandfather was blind.	cause	1	178	
+The boy communicated with his grandfather by writing.	His grandfather was deaf.	His grandfather was blind.	cause	0	179	
+My foot went numb.	I shook my foot.	I put my shoes on.	effect	0	180	
+The sand at the beach was too hot.	I put my shoes on.	I shook my foot.	effect	0	181	
+The photographer got the child to smile.	The photographer quickly snapped the child's photo.	The photographer quickly changed the child's pose.	effect	0	182	
+The photographer could not see the child's face.	The photographer quickly changed the child's pose.	The photographer quickly snapped the child's photo.	effect	0	183	
+The window was opaque.	The glass was stained.	The blinds were open.	cause	0	184	
+The sun was coming through the window.	The blinds were open.	The glass was stained.	cause	0	185	
+I slipped on the floor.	The tile was cracked.	The tile was wet.	cause	1	186	
+I cut my foot on the floor.	The tile was cracked.	The tile was wet.	cause	0	187	
+The man slid the razor across his chin.	His stubble grew.	His stubble disappeared.	effect	1	188	
+The man did not shave.	His stubble disappeared.	His stubble grew.	effect	1	189	
+The woman took her family on vacation.	Her husband got laid off.	She received a salary bonus.	cause	1	190	
+The woman looked for a job.	She received a salary bonus.	Her husband got laid off.	cause	1	191	
+The woman awakened.	She took sleeping pills.	Her husband was snoring.	cause	1	192	
+The woman did not wake up.	Her husband was snoring.	She took sleeping pills.	cause	1	193	
+The woman sensed a pleasant smell.	She remembered to take her medication.	She was reminded of her childhood.	effect	1	194	
+The woman felt dizzy.	She was reminded of her childhood.	She remembered to take her medication.	effect	1	195	
+The bar closed.	It was 3 AM.	It was crowded.	cause	0	196	
+There was nowhere to sit in the bar.	It was crowded.	It was 3 AM.	cause	0	197	
+The driver got pulled over by the police.	He was parking.	He was speeding.	cause	1	198	
+The driver looked into the rear camera.	He was parking.	He was speeding.	cause	0	199	
+The teacher took roll.	She identified the students that were absent.	She gave her students a pop quiz.	effect	0	200	
+The teacher wanted to grade the students.	She gave her students a pop quiz.	She identified the students that were absent.	effect	0	201	
+I pushed the pendulum.	It swung back and forth.	It slowed to a stop.	effect	0	202	
+I blocked the pendulum.	It swung back and forth.	It slowed to a stop.	effect	1	203	
+The child kicked the stack of blocks.	The stack towered over the boy's head.	The blocks scattered all over the rug.	effect	1	204	
+The child punched the stack of blocks.	The stack towered over the boy's head.	The blocks scattered all over the rug.	effect	0	205	
+The teenager ran away from home.	He relied on his parents.	His parents abused him.	cause	1	206	
+The teenager always stayed home.	He relied on his parents.	His parents abused him.	cause	0	207	
+I botched the job interview.	I anticipated the interviewer's questions.	The interviewer asked difficult questions.	cause	1	208	
+I passed the job interview.	I anticipated the interviewer's questions.	The interviewer asked difficult questions.	cause	0	209	
+The pharmaceutical company recalled the drug.	Users got refills on their prescriptions.	Users reported dangerous side effects.	cause	1	210	
+The pharmaceutical company promoted the drug.	Users got refills on their prescriptions.	Users reported dangerous side effects.	cause	0	211	
+The man looked at his watch.	He realized he was early.	He realized he forgot something.	effect	0	212	
+The man looked at his list.	He realized he was early.	He realized he forgot something.	effect	1	213	
+I dabbed the floor with a paper towel.	The floor was permanently stained.	I spilled juice on the floor.	cause	1	214	
+I replaced the floor with brand new tile.	I spilled juice on the floor.	The floor was permanently stained.	cause	1	215	
+The bartender refused to serve the patron.	The patron was alone.	The patron was drunk.	cause	1	216	
+The bartender accompanied the patron.	The patron was drunk.	The patron was alone.	cause	1	217	
+I was confused by the professor's lecture.	I asked the professor questions.	I paid attention to the professor.	effect	0	218	
+I was interested in the professor's lecture.	I paid attention to the professor.	I asked the professor questions.	effect	0	219	
+The book was deemed inappropriate for children.	Schools banned it from its libraries.	Teachers required students to read it.	effect	0	220	
+The book was deemed appropriate for children.	Teachers required students to read it.	Schools banned it from its libraries.	effect	0	221	
+The man begged for forgiveness.	The woman joked around with him.	The woman took pity on him.	effect	1	222	
+The man laughed at comedy.	The woman joked around with him.	The woman took pity on him.	effect	0	223	
+I received a package in the mail.	I took the package to the post office.	The package triggered my curiosity.	effect	1	224	
+I received someone's package in the mail.	I took the package to the post office.	The package triggered my curiosity.	effect	0	225	
+The surfer caught the wave.	She paddled her board into the ocean.	The wave carried her to the shore.	effect	1	226	
+The surfer saw the wave.	She paddled her board into the ocean.	The wave carried her to the shore.	effect	0	227	
+The speaker disarmed her debate opponent.	The speaker congratulated her opponent.	The speaker won the debate.	effect	1	228	
+The speaker was defeated by her debate opponent.	The speaker won the debate.	The speaker congratulated her opponent.	effect	1	229	
+I moved to a new city.	My son was born.	I found a better-paying job.	cause	1	230	
+I was moved.	My son was born.	I found a better-paying job.	cause	0	231	
+I avoided giving a straight answer to the question.	The question made me uncomfortable.	I wanted to be honest.	cause	0	232	
+I promised to give a straight answer to the question.	The question made me uncomfortable.	I wanted to be honest.	cause	1	233	
+The student received detention.	He talked back to the teacher.	The teacher graded his homework.	cause	0	234	
+The student learned most mistakes.	He talked back to the teacher.	The teacher graded his homework.	cause	1	235	
+The boy's hands were shaking.	He planned to ask the girl out.	His palms were cold and sweaty.	cause	0	236	
+The boy's friends were scared.	He planned to ask the girl out.	His palms were cold and sweaty.	cause	1	237	
+The fans in the stadium cheered.	The game ended in a tie.	The player scored.	cause	1	238	
+The fans in the stadium were apathetic.	The player scored.	The game ended in a tie.	cause	1	239	
+The girl went down the hill on her bike.	Her bike swerved.	Her bike sped up.	effect	1	240	
+The girl turned down the hill on her bike.	Her bike sped up.	Her bike swerved.	effect	1	241	
+A man cut in front of me in the long line.	I confronted him.	I smiled at him.	effect	0	242	
+A man let me in front of the long line.	I confronted him.	I smiled at him.	effect	1	243	
+The inside of the train went dark.	The train travelled through a tunnel.	The train ran off the tracks.	cause	0	244	
+The inside of the train became destroyed.	The train ran off the tracks.	The train travelled through a tunnel.	cause	0	245	
+The man contemplated the painting.	He collapsed.	He felt in awe.	effect	1	246	
+The man had a heart attack.	He felt in awe.	He collapsed.	effect	1	247	
+The turtle hid in its shell.	It detected a predator.	It ate a fish.	cause	0	248	
+The turtle felt tired.	It detected a predator.	It ate a fish.	cause	1	249	
+The girl handed down her clothes to her younger sister.	She outgrew the clothes.	The clothes were tattered.	cause	0	250	
+The girl threw her clothes away.	The clothes were tattered.	She outgrew the clothes.	cause	0	251	
+Several witnesses of the crime testified against the suspect.	The suspect was acquitted.	The suspect was convicted.	effect	1	252	
+No witnesses of the crime testified against the suspect.	The suspect was convicted.	The suspect was acquitted.	effect	1	253	
+The parents left their children with a babysitter.	They made plans to celebrate their anniversary.	Their youngest child started attending preschool.	cause	0	254	
+The parents left their children with a teacher.	They made plans to celebrate their anniversary.	Their youngest child started attending preschool.	cause	1	255	
+The trip took a long time.	The driver talked the whole way.	The driver made a wrong turn.	cause	1	256	
+The trip was a fun time.	The driver talked the whole way.	The driver made a wrong turn.	cause	0	257	
+The product was heavily advertised.	The product became outdated.	Consumers recognized the product.	effect	1	258	
+The producted was replaced.	The product became outdated.	Consumers recognized the product.	effect	0	259	
+I rubbed the soap between my hands.	My hands went numb.	The soap foamed.	effect	1	260	
+I slammed my hands in the door.	The soap foamed.	My hands went numb.	effect	1	261	
+The cowgirl threw her lasso towards the horse.	The lasso grabbed onto the horse.	The horse trotted into the barn.	effect	0	262	
+The cowgirl missed her lasso towards the horse.	The horse trotted into the barn.	The lasso grabbed onto the horse.	effect	0	263	
+The group overlooked the woman's faux pas.	The woman apologized.	The woman was relieved.	effect	1	264	
+The group was offended by the woman's faux pas.	The woman apologized.	The woman was relieved.	effect	0	265	
+The girl came across an unfamiliar word in her textbook.	She looked the term up in the dictionary.	She chucked the textbook across the room.	effect	0	266	
+The girl came across an offensive word in her textbook.	She chucked the textbook across the room.	She looked the term up in the dictionary.	effect	0	267	
+The man became disabled.	His family cut off contact with him.	His family offered him financial support.	effect	1	268	
+The man became offensive.	His family offered him financial support.	His family cut off contact with him.	effect	1	269	
+The flashlight was dead.	I took it apart.	I replaced the batteries.	effect	1	270	
+The flashlight was broken.	I replaced the batteries.	I took it apart.	effect	1	271	
+The skunk sprayed the dog.	The dog emitted a foul smell.	The skunk roamed the woods.	effect	0	272	
+The skunk became hungry.	The skunk roamed the woods.	The dog emitted a foul smell.	effect	0	273	
+I scratched my skin.	My itch went away.	My scar faded.	effect	0	274	
+I cleaned my skin.	My scar faded.	My itch went away.	effect	0	275	
+I wrote a thank-you note to my grandmother.	She sent me a gift.	She became forgetful.	cause	0	276	
+I wrote a reminder note to my grandmother.	She sent me a gift.	She became forgetful.	cause	1	277	
+A burglar broke into the house.	The homeowners were asleep.	The security alarm went off.	effect	1	278	
+It was night in a quiet neighborhood.	The security alarm went off.	The homeowners were asleep.	effect	1	279	
+I held the door for the woman entering behind me.	The woman thanked me.	The door slammed shut.	effect	0	280	
+The woman behind me left the door open.	The woman thanked me.	The door slammed shut.	effect	1	281	
+The mirror in the bathroom fogged up.	The girl applied her makeup.	The girl turned on the fan.	effect	1	282	
+The mirror in the bathroom cleared up.	The girl turned on the fan.	The girl applied her makeup.	effect	1	283	
+The security guard tackled the man.	The man reached into his pocket.	The man displayed a weapon.	cause	1	284	
+The security guard questioned the man.	The man displayed a weapon.	The man reached into his pocket.	cause	1	285	
+The driver rotated the steering wheel.	The car turned.	The car halted.	effect	0	286	
+The drived pressed on the brakes.	The car halted.	The car turned.	effect	0	287	
+The army surrendered the battle.	They were outnumbered.	They stormed the city.	cause	0	288	
+The army won the battle.	They were outnumbered.	They stormed the city.	cause	1	289	
+The navy bombed the ship.	The ship crashed into the pier.	The ship's debris sunk in the sea.	effect	1	290	
+The captain passed out.	The ship's debris sunk in the sea.	The ship crashed into the pier.	effect	1	291	
+I ironed my shirt.	It was wrinkled.	It was clean.	cause	0	292	
+I wore my shirt.	It was clean.	It was wrinkled.	cause	0	293	
+The girl felt dizzy.	She did stretches.	She lost her balance.	effect	1	294	
+The girl wanted to exercise.	She lost her balance.	She did stretches.	effect	1	295	
+The driver pulled over to the side of the road.	He noticed a stranded vehicle.	He went through an intersection.	cause	0	296	
+The driver crashed over to the side of the road.	He noticed a stranded vehicle.	He went through an intersection.	cause	1	297	
+The hospital sent the patient home.	The patient's symptoms cleared up.	The patient's family visited him.	cause	0	298	
+The patient felt happy.	The patient's family visited him.	The patient's symptoms cleared up.	cause	0	299	
+The child caught a life-threatening illness.	She didn't get vaccinated.	She was adopted.	cause	0	300	
+The child did not know her parents.	She was adopted.	She didn't get vaccinated.	cause	0	301	
+We found empty seats in the theatre.	We sat down.	The film began.	effect	0	302	
+The opening credits finished playing.	The film began.	We sat down.	effect	0	303	
+The parents recognized their daughter's creativity.	They encouraged her to become an artist.	They taught her how to ride a bike.	effect	0	304	
+The parents recognized their daughter's interest in sports.	They encouraged her to become an artist.	They taught her how to ride a bike.	effect	1	305	
+The boy turned the lid on the jar.	The jar became warm.	The lid came off.	effect	1	306	
+The boy rubbed the side of the jar.	The lid came off.	The jar became warm.	effect	1	307	
+The woman received a diploma.	She enrolled in college.	She graduated from college.	cause	1	308	
+The woman aimed for a diploma.	She enrolled in college.	She graduated from college.	cause	0	309	
+I chugged the pitcher of water.	I ran five miles.	I walked upstairs.	cause	0	310	
+I reached the top of the building.	I walked upstairs.	I ran five miles.	cause	0	311	
+I came upon a puddle on the sidewalk.	I leapt over the puddle.	I played in the puddle.	effect	0	312	
+The puddle on the sidewalk looked fun.	I leapt over the puddle.	I played in the puddle.	effect	1	313	
+The woman covered her ears.	The woman smelled smoke.	The fire alarm blared.	cause	1	314	
+The woman covered her nose.	The fire alarm blared.	The woman smelled smoke.	cause	1	315	
+The archeologist dug up the site.	She read about the site's history.	She excavated ancient artifacts.	effect	1	316	
+The archelogist discovered the site.	She read about the site's history.	She excavated ancient artifacts.	effect	0	317	
+The audience booed the comedian off the stage.	He entertained the audience.	He told a racist joke.	cause	1	318	
+The audience applauded the comedian on stage.	He entertained the audience.	He told a racist joke.	cause	0	319	
+The coach gave his player a high five.	The player got a penalty.	The player scored a point.	cause	1	320	
+The coach gave his player a headshake.	The player got a penalty.	The player scored a point.	cause	0	321	
+I tossed the ball upwards.	The ball hit the ceiling.	The ball rolled across the ground.	effect	0	322	
+I tossed the ball forward.	The ball hit the ceiling.	The ball rolled across the ground.	effect	1	323	
+My breath smelled of garlic.	I wiped my mouth.	I brushed my teeth.	effect	1	324	
+My lips were covered in garlic.	I wiped my mouth.	I brushed my teeth.	effect	0	325	
+The man was lost.	He asked for directions.	He drew a map.	effect	0	326	
+The man was local.	He drew a map.	He asked for directions.	effect	0	327	
+The baby pulled the mother's hair.	The mother grimaced.	The baby burped.	effect	0	328	
+The mother patted the baby's back.	The mother grimaced.	The baby burped.	effect	1	329	
+I stood on one foot.	My balance wavered.	I kneeled down.	effect	0	330	
+I was tired of standing.	I kneeled down.	My balance wavered.	effect	0	331	
+I pushed the gas pedal.	The car accelerated.	The car door opened.	effect	0	332	
+I pulled on the knob.	The car door opened.	The car accelerated.	effect	0	333	
+My car was towed.	I jumped the battery.	I parked illegally.	cause	1	334	
+My car was rejuvenated.	I parked illegally.	I jumped the battery.	cause	1	335	
+The woman got away with the crime.	She destroyed the evidence.	Her accomplice was apprehended.	cause	0	336	
+The woman got charged with the crime.	Her accomplice was apprehended.	She destroyed the evidence.	cause	0	337	
+The dust came off the desk.	I removed the books from the desk.	I wiped the desk with a cloth.	cause	1	338	
+The desk was light.	I wiped the desk with a cloth.	I removed the books from the desk.	cause	1	339	
+The motorcyclist twisted the throttle.	The motorcycle shot forward.	The motorcycle coasted to a halt.	effect	0	340	
+The motorcyclist let go of the throttle.	The motorcycle coasted to a halt.	The motorcycle shot forward.	effect	0	341	
+The teacher caught the student chewing gum.	The student spit out the gum.	The gum stuck to the student's shoe.	effect	0	342	
+The teacher threw the chewing gum at the student.	The student spit out the gum.	The gum stuck to the student's shoe.	effect	1	343	
+The host served dinner to his guests.	His guests were gracious.	His guests went hungry.	effect	0	344	
+The host served nothing to his guests.	His guests went hungry.	His guests were gracious.	effect	0	345	
+The boy climbed the tree.	A bird built a nest in the tree.	A cat got stuck in the tree.	cause	1	346	
+The boy avoided the tree.	A bird built a nest in the tree.	A cat got stuck in the tree.	cause	0	347	
+The chair squeaked.	The man carried the chair to his office.	The man scooted the chair closer to his desk.	cause	1	348	
+The chair fell.	The man carried the chair to his office.	The man scooted the chair closer to his desk.	cause	0	349	
+The father shut off the children's television.	It was bedtime for the children.	The children were watching cartoons.	cause	0	350	
+The father laughed at the children's television.	The children were watching cartoons.	It was bedtime for the children.	cause	0	351	
+The man held his breath.	He treaded water.	He went underwater.	cause	1	352	
+The man exhaled his breath.	He treaded water.	He went underwater.	cause	0	353	
+I clumsily bumped into the stranger.	I ran away.	I apologized to him.	effect	1	354	
+I intentionally bumped into the stranger.	I ran away.	I apologized to him.	effect	0	355	
+The boat capsized.	It was caught in a hurricane.	The captain raised the sail.	cause	0	356	
+The boat moved.	It was caught in a hurricane.	The captain raised the sail.	cause	1	357	
+The mother suspected that her son was lying.	He refused to talk to her.	He avoided making eye contact with her.	cause	1	358	
+The mother suspected that her son was upset.	He refused to talk to her.	He avoided making eye contact with her.	cause	0	359	
+The young woman was denied entrance into the bar.	Her friends stood her up.	She forgot her ID.	cause	1	360	
+The young woman entered the bar alone.	Her friends stood her up.	She forgot her ID.	cause	0	361	
+A crater formed on the moon.	A comet passed by the moon.	A comet collided with the moon.	cause	1	362	
+A crater did not form on the moon.	A comet collided with the moon.	A comet passed by the moon.	cause	1	363	
+I planted the seeds in the soil.	The seeds sprouted.	I watered the soil.	effect	0	364	
+The soil was dry.	I watered the soil.	The seeds sprouted.	effect	0	365	
+The benefactor requested to stay anonymous.	He supported the cause behind his donation.	He wanted to maintain his privacy.	cause	1	366	
+The benefactor looked extremely excited.	He supported the cause behind his donation.	He wanted to maintain his privacy.	cause	0	367	
+The woman felt ashamed of scar on her face.	She hid the scar with makeup.	She explained the scar to strangers.	effect	0	368	
+The woman was questioned about the scar on her face.	She hid the scar with makeup.	She explained the scar to strangers.	effect	1	369	
+The doctor x-rayed the patient's arm.	He put the patient's arm in a cast.	He discovered that the patient's arm was broken.	effect	1	370	
+The doctor discovered the patient's arm was broken.	He discovered that the patient's arm was broken.	He put the patient's arm in a cast.	effect	1	371	
+The boy filled the bucket with sand.	He was building a sand castle.	He was collecting seashells in the sand.	cause	0	372	
+The boy cut his hand in the sand.	He was building a sand castle.	He was collecting seashells in the sand.	cause	1	373	
+The woman upgraded her computer hardware.	She deleted old files on the computer.	She installed new software on the computer.	effect	1	374	
+The woman wanted to sell her computer hardware.	She installed new software on the computer.	She deleted old files on the computer.	effect	1	375	
+The girl performed in a dance recital.	Her parents came to watch the recital.	Her parents showed her how to dance.	effect	0	376	
+The girl never learned to dance.	Her parents came to watch the recital.	Her parents showed her how to dance.	effect	1	377	
+The baby was wailing in his crib.	The mother picked up the baby.	The baby crawled to the mother.	effect	0	378	
+The baby's name was called.	The mother picked up the baby.	The baby crawled to the mother.	effect	1	379	
+The woman had a religious awakening.	She began going to church.	She began travelling abroad.	effect	0	380	
+The woman wanted to change her environment.	She began travelling abroad.	She began going to church.	effect	0	381	
+The bureau drawers were cluttered.	I locked the drawers shut.	I threw away unnecessary contents.	effect	1	382	
+The buerau drawers were opened.	I threw away unnecessary contents.	I locked the drawers shut.	effect	1	383	
+The student flaunted his test grade to his classmates.	He feigned interest in the class.	He received a perfect score.	cause	1	384	
+The student hid his test grade from his classmates.	He received a perfect score.	He feigned interest in the class.	cause	1	385	
+The boy felt homesick.	He went away to camp.	He bickered with his sister.	cause	0	386	
+The boy felt exhausted.	He bickered with his sister.	He went away to camp.	cause	0	387	
+The rocket flew up into the sky.	The girl designed it.	The girl launched it.	cause	1	388	
+The rocket looked pretty.	The girl designed it.	The girl launched it.	cause	0	389	
+The boy murmured his reply to his mother.	His mother told him to whisper.	His mother told him to speak up.	effect	1	390	
+The boy yelled his reply to his mother.	His mother told him to speak up.	His mother told him to whisper.	effect	1	391	
+My flight got delayed.	Tornadoes were sighted in the area.	I was held up at airport security.	cause	0	392	
+My flight got rescheduled.	Tornadoes were sighted in the area.	I was held up at airport security.	cause	1	393	
+The smoke alarm went off.	I lit a candle.	I burnt my dinner.	cause	1	394	
+The room became bright.	I lit a candle.	I burnt my dinner.	cause	0	395	
+The vase broke.	I stenciled it.	I glued it back together.	effect	1	396	
+The vase had a nice shape.	I glued it back together.	I stenciled it.	effect	1	397	
+The woman felt an electric shock.	She pounded on the door.	She grabbed the doorknob.	cause	1	398	
+The woman felt extremely fatigued.	She grabbed the doorknob.	She pounded on the door.	cause	1	399	
+The man had lipstick on his cheek.	The woman made him blush.	The woman kissed him.	cause	1	400	
+The man had a grin on his face.	The woman kissed him.	The woman made him blush.	cause	1	401	
+I jumped instinctively in fright.	I heard people chuckling in the adjacent room.	I sensed someone approaching me from behind.	cause	1	402	
+I woke up.	I heard people chuckling in the adjacent room.	I sensed someone approaching me from behind.	cause	0	403	
+The gardener wanted his plants to flourish.	He planted a variety of seeds.	He put fertilizer in the soil.	effect	1	404	
+The gardener wanted more plants to flourish.	He put fertilizer in the soil.	He planted a variety of seeds.	effect	1	405	
+A water pipe in the house burst.	The water was unsanitary.	The pipe froze.	cause	1	406	
+A water pipe in the house was leaking.	The water was unsanitary.	The pipe froze.	cause	0	407	
+The waistband on my pants was loose.	I put on a belt.	I put on a hat.	effect	0	408	
+The sun shined so bright.	I put on a belt.	I put on a hat.	effect	1	409	
+The company lost money.	Its products received positive consumer reviews.	Some of its products were manufactured defectively.	cause	1	410	
+The company sold more products.	Its products received positive consumer reviews.	Some of its products were manufactured defectively.	cause	0	411	
+The tenants were evicted from the apartment.	They neglected to pay their rent.	They got along with their landlord.	cause	0	412	
+The tenants lease for the apartment was extended.	They got along with their landlord.	They neglected to pay their rent.	cause	0	413	
+The man woke up with a toothache.	He missed an appointment with the dentist.	He made an appointment with the dentist.	effect	1	414	
+The man woke up late.	He missed an appointment with the dentist.	He made an appointment with the dentist.	effect	0	415	
+The team lost the game.	Their coach pumped them up.	Their best player was injured.	cause	1	416	
+The team won the game.	Their best player was injured.	Their coach pumped them up.	cause	1	417	
+The parents forbade their children from watching the movie.	The movie was rated R.	The movie was animated.	cause	0	418	
+The parents allowed their children to watch the movie.	The movie was rated R.	The movie was animated.	cause	1	419	
+The woman deleted the email.	The sender tried to solicit money from her.	The sender requested a response from her.	cause	0	420	
+The woman read the email.	The sender tried to solicit money from her.	The sender requested a response from her.	cause	1	421	
+The police eliminated the woman from the list of suspects.	The police interrogated her.	Her alibi checked out.	cause	1	422	
+The police kept the woman on the list of suspects.	Her alibi checked out.	The police interrogated her.	cause	1	423	
+The climbers reached the peak of the mountain.	They congratulated each other.	They encountered an avalanche.	effect	0	424	
+The climbers failed to reach the peak of the mountain.	They congratulated each other.	They encountered an avalanche.	effect	1	425	
+The vandals threw a rock at the window.	The window cracked.	The window fogged up.	effect	0	426	
+The vandals blew cold air at the window.	The window cracked.	The window fogged up.	effect	1	427	
+The fortune teller's revelations were convincing.	She received many returning customers.	Many customers asked for refunds.	effect	0	428	
+The fortune teller's revelations were false.	Many customers asked for refunds.	She received many returning customers.	effect	0	429	
+The woman's makeup smeared.	She brushed her hair.	She wiped her eyes.	cause	1	430	
+The woman's head looked nice.	She brushed her hair.	She wiped her eyes.	cause	0	431	
+The company's profits started to level off.	It increased its marketing efforts for new products.	It moved its headquarters to a suburban location.	effect	0	432	
+The company was seeking highly specialized talent.	It moved its headquarters to a suburban location.	It increased its marketing efforts for new products.	effect	0	433	
+The student's answer on the exam was incorrect.	The teacher subtracted points off the student's grade.	The teacher added bonus points to the student's grade.	effect	0	434	
+The student's answer on the exam was extraordinary.	The teacher subtracted points off the student's grade.	The teacher added bonus points to the student's grade.	effect	1	435	
+The girl wanted to demonstrate proper etiquette.	She put her napkin on her lap before eating.	She threw away her napkin after eating.	effect	0	436	
+The girl demonstrated poor etiquette.	She threw away her napkin after eating.	She put her napkin on her lap before eating.	effect	0	437	
+The detective flashed his badge to the police officer.	The police officer confiscated the detective's badge.	The police officer let the detective enter the crime scene.	effect	1	438	
+The detective flashed his fake badge to the police officer.	The police officer confiscated the detective's badge.	The police officer let the detective enter the crime scene.	effect	0	439	
+The girl wanted to make her mother happy.	The girl picked a flower for her mother.	The girl ate the cookies her mother baked.	effect	0	440	
+The girl wanted to make her mother happy for her effort.	The girl picked a flower for her mother.	The girl ate the cookies her mother baked.	effect	1	441	
+The toddler started crying.	Her parents took away her toy.	Her parents gave her a toy.	effect	1	442	
+The toddler started being naught.	Her parents gave her a toy.	Her parents took away her toy.	effect	1	443	
+The stranger cried out to me in a foreign language.	I stopped to chat with him.	I stared blankly at him.	effect	1	444	
+The stranger shouted insults at me in a foreign language.	I stared blankly at him.	I stopped to chat with him.	effect	1	445	
+The man uncovered incriminating evidence against his enemy.	The man avoided his enemy.	The man blackmailed his enemy.	effect	1	446	
+The man discovered his enemy uncovered incriminating evidence against him.	The man avoided his enemy.	The man blackmailed his enemy.	effect	0	447	
+The girl pushed herself off the top of the slide.	She glided down the slide.	She crawled up the slide.	effect	0	448	
+The girl wanted to get on top of the slide.	She glided down the slide.	She crawled up the slide.	effect	1	449	
+My jaw dropped open.	I was shocked.	I was unhappy.	cause	0	450	
+My face dropped.	I was shocked.	I was unhappy.	cause	1	451	
+The child disobeyed her parents.	Her parents punished her.	Her parents hugged her.	effect	0	452	
+The child obeyed her parents.	Her parents hugged her.	Her parents punished her.	effect	0	453	
+The car looked filthy.	He owner took it in for a paint job.	The owner took it to the car wash.	effect	1	454	
+The car looked keyed.	He owner took it in for a paint job.	The owner took it to the car wash.	effect	0	455	
+My friend paid for my ticket.	I paid her back.	I sought a refund.	effect	0	456	
+I paid for friend's my ticket.	I paid her back.	I sought a refund.	effect	1	457	
+The woman was wrongly convicted for the crime.	She was framed.	The jury was fair.	cause	0	458	
+The woman was correctly convicted for the crime.	The jury was fair.	She was framed.	cause	0	459	
+The girl applied the scissors to the paper.	The paper crinkled.	The paper sliced apart.	effect	1	460	
+The girl clenched the paper her in her fist.	The paper crinkled.	The paper sliced apart.	effect	0	461	
+The woman visited her family.	She distrusted them.	She missed them.	cause	1	462	
+The woman refused to visit her family.	She distrusted them.	She missed them.	cause	0	463	
+I burst into a fit of laughter.	My teeth began to chatter.	My eyes welled up with tears.	effect	1	464	
+I burst into a cold room.	My teeth began to chatter.	My eyes welled up with tears.	effect	0	465	
+The school principal implemented a dress code.	Students were expelled from school.	Students protested the decision.	effect	1	466	
+The school principal effected the honor code.	Students were expelled from school.	Students protested the decision.	effect	0	467	
+The balloon expanded.	I blew into it.	I pricked it.	cause	0	468	
+The balloon poped.	I pricked it.	I blew into it.	cause	0	469	
+I wanted to lighten the mood of the conversation.	I remained quiet.	I told a joke.	effect	1	470	
+I wanted to tense up the mood of the conversation.	I remained quiet.	I told a joke.	effect	0	471	
+The man broke his toe.	He got a hole in his sock.	He dropped a hammer on his foot.	cause	1	472	
+The man hid his feet.	He got a hole in his sock.	He dropped a hammer on his foot.	cause	0	473	
+The man had an attack of conscience.	He manipulated his friend.	He admitted his indiscretion.	effect	1	474	
+The man had a dead conscience.	He manipulated his friend.	He admitted his indiscretion.	effect	0	475	
+A fistfight broke out in the hall of the school.	The principal suspended the students involved.	The principal called off classes for the day.	effect	0	476	
+A gas tank burst in the hall of the school.	The principal called off classes for the day.	The principal suspended the students involved.	effect	0	477	
+The photo albums collected dust in the attic.	The family reminisced over the photos.	They remained untouched for years.	cause	1	478	
+The photo album collection was treasured.	The family reminisced over the photos.	They remained untouched for years.	cause	0	479	
+I got distracted from my conversation with the woman.	Everyone in the room was talking.	The woman was telling a funny story.	cause	0	480	
+I got hooked to my conversation with the woman.	The woman was telling a funny story.	Everyone in the room was talking.	cause	0	481	
+I put coins in the washing machine at the laundromat.	I ran out of laundry detergent.	The machine powered on.	effect	1	482	
+I had too many clothes to wash at the laundromat.	The machine powered on.	I ran out of laundry detergent.	effect	1	483	
+The family postponed the barbeque.	The forecast called for storms.	It was a holiday weekend.	cause	0	484	
+The family had the barbeque.	The forecast called for storms.	It was a holiday weekend.	cause	1	485	
+Air leaked out of the beach ball.	It was inflated.	There was a hole in it.	cause	1	486	
+The beach ball bounced.	There was a hole in it.	It was inflated.	cause	1	487	
+Our group's conversation gradually lulled to silence.	I felt awkward.	I became enraged.	effect	0	488	
+Our group's conversation gradually escalated.	I felt awkward.	I became enraged.	effect	1	489	
+I clenched the candy wrapper in my fist.	The wrapper crinkled.	The wrapper ripped.	effect	0	490	
+I pulled apart the candy wrapper with my hands.	The wrapper ripped.	The wrapper crinkled.	effect	0	491	
+The woman pressed down on the piano key.	The key got stuck.	A sound played.	effect	1	492	
+The woman dropped syrup on the piano.	A sound played.	The key got stuck.	effect	1	493	
+The girl met her favorite actor.	She asked him for his autograph.	She went to see his new film.	effect	0	494	
+The girl saw a trailer of her favorite actor.	She went to see his new film.	She asked him for his autograph.	effect	0	495	
+The vehicles travelled slowly.	It was foggy.	It was cloudy.	cause	0	496	
+The people carried the umbrellas.	It was cloudy.	It was foggy.	cause	0	497	
+The chandelier shattered on the floor.	The chandelier's lights flickered on and off.	The chandelier dropped from the ceiling.	cause	1	498	
+The chandelier was removed from the ceiling.	The chandelier's lights flickered on and off.	The chandelier dropped from the ceiling.	cause	0	499	
+The cat purred.	It scratched me.	I petted it.	cause	1	500	
+I snapped at the cat.	It scratched me.	I petted it.	cause	0	501	
+The boy pushed his sister.	They played hide and seek.	His sister tattled on him.	effect	1	502	
+The boy found his sister.	They played hide and seek.	His sister tattled on him.	effect	0	503	
+The man gained weight.	He got his suit altered.	He got his shoes shined.	effect	0	504	
+The man stepped in the mud.	He got his suit altered.	He got his shoes shined.	effect	1	505	
+The clouds looked dark.	I brought my umbrella to work.	I brought my laptop to work.	effect	0	506	
+The cloud computer was blocked.	I brought my umbrella to work.	I brought my laptop to work.	effect	1	507	
+The engine of the airplane was faulty.	The airplane crashed.	The pilot made an error.	effect	0	508	
+The passenger on the airplane made a distracting noise.	The airplane crashed.	The pilot made an error.	effect	1	509	
+Cars moved to the shoulder of the road.	A screaming ambulance approached.	The traffic light turned green.	cause	0	510	
+Cars moved to the intersection of the road.	The traffic light turned green.	A screaming ambulance approached.	cause	0	511	
+The boy lost hold of the bar of soap.	The bar was slippery.	The bar emitted a fragrance.	cause	0	512	
+The boy lost sniffed the bar of soap.	The bar emitted a fragrance.	The bar was slippery.	cause	0	513	
+The button on my shirt fell off.	I sewed the button back on.	I glued the button back on.	effect	0	514	
+The button on my laptop fell off.	I sewed the button back on.	I glued the button back on.	effect	1	515	
+The celebrity wore sunglasses.	She wanted to avoid recognition.	She wanted to thank her fans.	cause	0	516	
+The celebrity took off her sunglasses.	She wanted to avoid recognition.	She wanted to thank her fans.	cause	1	517	
+My grandmother passed away.	My family held a reunion.	My family held a funeral.	effect	1	518	
+My grandmother passed by.	My family held a reunion.	My family held a funeral.	effect	0	519	
+The police officer pulled over the celebrity.	The celebrity sued the police officer.	The celebrity offered the officer a bribe.	effect	1	520	
+The police officer pulled the celebrity by the wrist.	The celebrity offered the officer a bribe.	The celebrity sued the police officer.	effect	1	521	
+The man revealed personal information to the therapist.	He trusted the therapist.	He disagreed with the therapist.	cause	0	522	
+The man withheld personal information from the therapist.	He trusted the therapist.	He disagreed with the therapist.	cause	1	523	
+The man fell unconscious.	The assailant took the man's wallet.	The assailant struck the man in the head.	cause	1	524	
+The man lost the credit card.	The assailant struck the man in the head.	The assailant took the man's wallet.	cause	1	525	
+I approached the man.	He looked familiar.	He looked busy.	cause	0	526	
+I did not approach the man.	He looked familiar.	He looked busy.	cause	1	527	
+The leader received praise.	He fought poverty.	He raised taxes.	cause	0	528	
+The leader received opposition.	He fought poverty.	He raised taxes.	cause	1	529	
+The man read the cartoon in the newspaper.	He chuckled.	He sipped coffee.	effect	0	530	
+The man felt cold while reading the newspaper.	He chuckled.	He sipped coffee.	effect	1	531	
+My mailbox was overflowing with letters.	I went on vacation for two weeks.	The lid on the mailbox broke.	cause	0	532	
+The letters were blown from my mailbox.	The lid on the mailbox broke.	I went on vacation for two weeks.	cause	0	533	
+The bananas ripened.	We ate them.	We squeezed them.	effect	0	534	
+The pimples ripened.	We squeezed them.	We ate them.	effect	0	535	
+The chef pressed down on the dough.	The dough flattened.	The dough crumbled.	effect	0	536	
+The chef pressed down on the dry dough.	The dough flattened.	The dough crumbled.	effect	1	537	
+The clay hardened.	The potter put the clay in the oven.	The potter rolled the clay into a ball.	cause	0	538	
+The clay took shape.	The potter put the clay in the oven.	The potter rolled the clay into a ball.	cause	1	539	
+My feet were blistered.	I went swimming.	I went hiking.	cause	1	540	
+My skin was dry.	I went hiking.	I went swimming.	cause	1	541	
+The woman betrayed her friend.	Her friend cut off contact with her.	Her friend sent her a greeting card.	effect	0	542	
+The woman stood by her friend.	Her friend cut off contact with her.	Her friend sent her a greeting card.	effect	1	543	
+The man took notice of the woman.	He caught a whiff of her perfume.	He had his back turned to her.	cause	0	544	
+The man never noticed the woman.	He had his back turned to her.	He caught a whiff of her perfume.	cause	0	545	
+The woman and her boyfriend got into a fight.	They planned a vacation together.	They stopped seeing each other.	effect	1	546	
+The woman and her boyfriend got engaged.	They stopped seeing each other.	They planned a vacation together.	effect	1	547	
+The bully stuck his foot out in front of his classmate.	The bully picked up his classmate.	The bully's classmate tripped.	effect	1	548	
+The bully stuck did not like his classmate.	The bully picked up his classmate.	The bully's classmate tripped.	effect	0	549	
+The man wanted to get revenge on his enemy.	The man declared a truce with his enemy.	The man framed his enemy for a crime.	effect	1	550	
+The man wanted to get peace with his enemy.	The man declared a truce with his enemy.	The man framed his enemy for a crime.	effect	0	551	
+I drank a cup of coffee.	I nodded off to sleep.	My yawning ceased.	effect	1	552	
+I drank a glass of whisky.	My yawning ceased.	I nodded off to sleep.	effect	1	553	
+The woman was mistaken for her sister.	The woman was close with her sister.	The woman looked like her sister.	cause	1	554	
+The woman invited her sister for coffee.	The woman looked like her sister.	The woman was close with her sister.	cause	1	555	
+The man made an error in his calculations.	He checked his work.	His work was hasty.	cause	1	556	
+The man never made an error in his calculations.	His work was hasty.	He checked his work.	cause	1	557	
+The woman's eyeglasses fogged up.	She entered the sauna.	She reclined by the pool.	cause	0	558	
+The woman left her eyeglasses on.	She reclined by the pool.	She entered the sauna.	cause	0	559	
+The shopper wondered about the cost of the item.	He decided to buy it.	He checked its price tag.	effect	1	560	
+The shopper won a discount on the cost of the item.	He decided to buy it.	He checked its price tag.	effect	0	561	
+The host of the trivia show called on the contestant for an answer.	The contestant rang the buzzer.	The contestant was in the lead.	cause	0	562	
+The host of the trivia show called on the contestant to pick a category.	The contestant rang the buzzer.	The contestant was in the lead.	cause	1	563	
+The boy was afraid to go to bed.	He watched a horror movie.	He turned on his nightlight.	cause	0	564	
+The boy was struggling to fall asleep.	He turned on his nightlight.	He watched a horror movie.	cause	0	565	
+The woman wanted to be a doctor.	She visited the hospital.	She went to medical school.	effect	1	566	
+The woman wanted to see a doctor.	She went to medical school.	She visited the hospital.	effect	1	567	
+The boy found the television show boring.	He recorded it.	He shut it off.	effect	1	568	
+The boy found the television show interesting.	He shut it off.	He recorded it.	effect	1	569	
+My daughter suffered an allergy attack.	I took her to the emergency room.	I encouraged her to take deep breaths.	effect	0	570	
+My daughter suffered an panic attack.	I encouraged her to take deep breaths.	I took her to the emergency room.	effect	0	571	
+The boy had trouble buttoning his shirt.	He refused to wear the shirt.	He asked his mother for help.	effect	1	572	
+The boy had trouble buttoning his tight shirt.	He asked his mother for help.	He refused to wear the shirt.	effect	1	573	
+I spit out my chewing gum.	I blew a bubble with the gum.	The gum lost its flavor.	cause	1	574	
+I enjoyed my chewing gum.	The gum lost its flavor.	I blew a bubble with the gum.	cause	1	575	
+The boy painted a picture for his mother.	His mother sold the picture to a gallery.	His mother hung the picture on the wall.	effect	1	576	
+The mother no longer needed her son's picture.	His mother sold the picture to a gallery.	His mother hung the picture on the wall.	effect	0	577	
+The competition ended.	The teams shook hands.	The teams got pumped up.	effect	0	578	
+The finals were approaching.	The teams shook hands.	The teams got pumped up.	effect	1	579	
+The girl politely declined the hamburger.	She liked fast food.	She was a vegetarian.	cause	1	580	
+The girl politely accepted the hamburger.	She was a vegetarian.	She liked fast food.	cause	1	581	
+I scrubbed the stain on the floor.	I got rid of the stain.	I got dirt on the floor.	effect	0	582	
+I smeared the stain on the floor.	I got rid of the stain.	I got dirt on the floor.	effect	1	583	
+The documents contained important information.	I kept them in a secure place.	I paper clipped them together.	effect	0	584	
+The documents were loose.	I paper clipped them together.	I kept them in a secure place.	effect	0	585	
+The egg splattered.	I dropped it.	I boiled it.	cause	0	586	
+The egg hardened.	I dropped it.	I boiled it.	cause	1	587	
+The girl pushed her friend.	Her friend choked.	Her friend fell over.	effect	1	588	
+The girl strangled her friend.	Her friend choked.	Her friend fell over.	effect	0	589	
+A group of teenagers crashed the party.	The host of the party kicked them out.	The host of the party invited them in.	effect	0	590	
+A group of teenagers helped organizing the party.	The host of the party kicked them out.	The host of the party invited them in.	effect	1	591	
+The man took a shower.	He opened a new bar of soap.	He was sweaty from working out.	cause	1	592	
+The man felt clean.	He was sweaty from working out.	He opened a new bar of soap.	cause	1	593	
+The screen on the laptop went black.	The laptop's warranty expired.	The laptop's battery died.	cause	1	594	
+The manufacturer wouldn't fix the screen on the laptop after it went black.	The laptop's warranty expired.	The laptop's battery died.	cause	0	595	
+The book became a huge bestseller.	The author faded into obscurity.	It was adapted into a movie.	effect	1	596	
+The book became a huge failure.	The author faded into obscurity.	It was adapted into a movie.	effect	0	597	
+The man felt thankful to be alive.	He was cured of cancer.	His wife was diagnosed with cancer.	cause	0	598	
+The man felt depressed.	His wife was diagnosed with cancer.	He was cured of cancer.	cause	0	599	
+The woman wrote a check to the gas company.	She received her monthly bill.	She preferred paying by cash.	cause	0	600	
+The woman never used her credit card.	She received her monthly bill.	She preferred paying by cash.	cause	1	601	
+The woman felt reluctant to switch careers.	She made a lot of money in her current occupation.	She endured a lot of stress in her current occupation.	cause	0	602	
+The woman quit her job recently.	She made a lot of money in her current occupation.	She endured a lot of stress in her current occupation.	cause	1	603	
+The woman filed a restraining order against the man.	The man stalked her.	The man called her.	cause	0	604	
+The woman answered the phone.	The man called her.	The man stalked her.	cause	0	605	
+The ocean tide was dangerous.	The swimmers put on more sunscreen.	The swimmers returned towards the shore.	effect	1	606	
+The sun shined very brightly.	The swimmers put on more sunscreen.	The swimmers returned towards the shore.	effect	0	607	
+The woman refused a second beer.	She was familiar with the bartender.	She was the designated driver for the night.	cause	1	608	
+The woman stayed late in the bar.	She was familiar with the bartender.	She was the designated driver for the night.	cause	0	609	
+I ran out of breath.	I climbed several flights of stairs.	I read several chapters of the book.	cause	0	610	
+I understood the story.	I read several chapters of the book.	I climbed several flights of stairs.	cause	0	611	
+The woman was deemed mentally ill.	She was sent to a psychiatric institution.	She sought a career as a psychiatrist.	effect	0	612	
+The woman studied mental disorder treatment.	She was sent to a psychiatric institution.	She sought a career as a psychiatrist.	effect	1	613	
+The sun emerged from the clouds.	The woman glanced at her watch.	The woman took her sweater off.	effect	1	614	
+The woman worried whether she would be late.	The woman took her sweater off.	The woman glanced at her watch.	effect	1	615	
+The football coach lost his voice after the game.	He whistled whenever a player scored a touchdown.	He yelled whenever a player fumbled the ball.	cause	1	616	
+The players called their coach "The Flute".	He whistled whenever a player scored a touchdown.	He yelled whenever a player fumbled the ball.	cause	0	617	
+The woman complimented the man.	He blushed.	He sneezed.	effect	0	618	
+The man caught a cold.	He sneezed.	He blushed.	effect	0	619	
+I applied pressure to the cut on my arm.	It healed.	It stopped bleeding.	effect	1	620	
+I applied ointment on my wound regularly.	It stopped bleeding.	It healed.	effect	1	621	
+The woman had an infection.	She washed her hands.	She took antibiotics.	effect	1	622	
+The woman was about to cook.	She took antibiotics.	She washed her hands.	effect	1	623	
+The woman was summoned for jury duty.	She contacted her lawyer.	She cancelled her appointments.	effect	1	624	
+The woman wanted a divorce.	She cancelled her appointments.	She contacted her lawyer.	effect	1	625	
+The woman fanned herself with her hand.	She installed the air conditioner in the room.	The air conditioner in the room broke.	cause	1	626	
+The woman's room is always cold.	The air conditioner in the room broke.	She installed the air conditioner in the room.	cause	1	627	
+The doctors amputated the patient's leg.	It was badly bruised.	It was severely infected.	cause	1	628	
+The doctor put an ice pack on the leg.	It was badly bruised.	It was severely infected.	cause	0	629	
+The girl stared at herself in the mirror.	She felt self-conscious.	The mirror was smudged.	cause	0	630	
+The girl could barely see her reflection.	She felt self-conscious.	The mirror was smudged.	cause	1	631	
+The man was bitten by mosquitoes.	He fell asleep on his couch.	He went camping in the woods.	cause	1	632	
+The man felt unrested in the morning.	He went camping in the woods.	He fell asleep on his couch.	cause	1	633	
+The woman presented her brother with a gift.	Her brother unwrapped the gift.	Her brother refused to accept the gift.	effect	0	634	
+The woman's brother did not like the gift.	Her brother unwrapped the gift.	Her brother refused to accept the gift.	effect	1	635	
+The administrator cleared her throat.	The meeting was postponed.	The meeting commenced.	effect	1	636	
+Most members were unable to join.	The meeting was postponed.	The meeting commenced.	effect	0	637	
+The children ran through the sprinkler.	They were hot.	They ate popsicles.	cause	0	638	
+The children had a toothache.	They ate popsicles.	They were hot.	cause	0	639	
+The man needed coins to fill the parking meter.	He begged people on the street for loose change.	He searched under his car seats for loose change.	effect	1	640	
+The poor man recently lost his job.	He searched under his car seats for loose change.	He begged people on the street for loose change.	effect	1	641	
+The customer thought the souvenir was overpriced.	The vender sold it to him.	He bargained with the vendor.	effect	1	642	
+The customer had enough money for the souvenir.	He bargained with the vendor.	The vender sold it to him.	effect	1	643	
+The scientist gained recognition.	She discovered a new species.	She received tenure at the university.	cause	0	644	
+The scientist continued with her ongoing research.	She received tenure at the university.	She discovered a new species.	cause	0	645	
+The car stopped at the crosswalk.	The pedestrian crossed the road.	The pedestrian waited on the sidewalk.	effect	0	646	
+The pedestrian crossing signal turned red.	The pedestrian waited on the sidewalk.	The pedestrian crossed the road.	effect	0	647	
+The boy giggled uncontrollably.	His brother tickled him.	His brother kicked him.	cause	0	648	
+The boy started crying loudly.	His brother kicked him.	His brother tickled him.	cause	0	649	
+My knees buckled on the stairs.	I caught myself on the railing.	The railing came loose from the wall.	effect	0	650	
+I pulled too hard on the railing.	The railing came loose from the wall.	I caught myself on the railing.	effect	0	651	
+I went to bed.	It was a clear night.	It was late.	cause	1	652	
+I saw the stars.	It was a clear night.	It was late.	cause	0	653	
+My friend was recovering from surgery.	I dropped her off at the hospital.	I brought her a card and flowers.	effect	1	654	
+My friend had to go for a health checkup.	I brought her a card and flowers.	I dropped her off at the hospital.	effect	1	655	
+The DJ turned the music on.	People began to dance.	People left the party.	effect	0	656	
+The DJ did not play good music.	People began to dance.	People left the party.	effect	1	657	
+The security guard replayed the surveillance footage.	The surveillance camera was out of focus.	He noticed some suspicious activity.	cause	1	658	
+The security guard could not identify the thief.	The surveillance camera was out of focus.	He noticed some suspicious activity.	cause	0	659	
+I lingered in bed upon awakening.	I was hungry.	It was Saturday.	cause	1	660	
+My stomache started growling.	It was Saturday.	I was hungry.	cause	1	661	
+The man lifted the heavy box.	He scratched his back.	He put out his back.	effect	1	662	
+The man was bitten by insects.	He scratched his back.	He put out his back.	effect	0	663	
+The woman's purse was missing.	It contained a lot of junk.	She left it unsupervised.	cause	1	664	
+The woman emptied her mailbox.	It contained a lot of junk.	She left it unsupervised.	cause	0	665	
+The woman suffered amnesia.	She had an allergic reaction.	She got into a car accident.	cause	1	666	
+The woman got a body rash.	She had an allergic reaction.	She got into a car accident.	cause	0	667	
+I needed to get cash.	I went to the bank.	I bought a wallet.	effect	0	668	
+I needed to carry cash.	I went to the bank.	I bought a wallet.	effect	1	669	
+The rider fell to the ground.	The bull bucked the rider.	The bull chased the rider.	cause	0	670	
+The rider ran at full speed.	The bull bucked the rider.	The bull chased the rider.	cause	1	671	
+The boy wanted to be muscular.	He played computer games.	He lifted weights.	effect	1	672	
+The boy loved staying in his room.	He lifted weights.	He played computer games.	effect	1	673	
+The scientist conducted an experiment.	She fabricated her data.	She validated her theory.	effect	1	674	
+The scientist could not finish her experiments on time.	She fabricated her data.	She validated her theory.	effect	0	675	
+The milk stayed cold.	I stored it in the refrigerator.	It was pasteurized.	cause	0	676	
+The honey lasted longer.	I stored it in the refrigerator.	It was pasteurized.	cause	1	677	
+The fussy baby calmed down.	The parents shook a rattle in front of the baby.	The parents picked out a name for the baby.	cause	0	678	
+The parents received a birth certificate.	The parents picked out a name for the baby.	The parents shook a rattle in front of the baby.	cause	0	679	
+I put ice cubes in the hot soup.	The soup became thick.	The soup cooled down.	effect	1	680	
+I put flour in the soup.	The soup became thick.	The soup cooled down.	effect	0	681	
+The girl shared her lunch with her friend.	Her friend sat next to her at lunch.	Her friend forgot to bring his lunch.	cause	1	682	
+The girl kept talking to her friend.	Her friend forgot to bring his lunch.	Her friend sat next to her at lunch.	cause	1	683	
+The police closed the investigation.	They apprehended the suspect.	The victim recovered.	cause	0	684	
+The police continued the investigation.	They apprehended the suspect.	The victim recovered.	cause	1	685	
+The rain subsided.	I went for a walk.	I browsed the internet.	effect	0	686	
+I wanted to check the weather forecast.	I went for a walk.	I browsed the internet.	effect	1	687	
+The cup of tea was scalding hot.	I poured it out.	I blew on it.	effect	1	688	
+The water in tank was dirty.	I poured it out.	I blew on it.	effect	0	689	
+The photograph faded.	It was fake.	It was old.	cause	1	690	
+The photograph was worthless.	It was fake.	It was old.	cause	0	691	
+The boy got a black eye.	The bully mocked the boy.	The bully punched the boy.	cause	1	692	
+The boy felt humiliated.	The bully mocked the boy.	The bully punched the boy.	cause	0	693	
+I misplaced my wallet.	I retraced my steps.	I retrieved my phone.	effect	0	694	
+I needed to call someone.	I retraced my steps.	I retrieved my phone.	effect	1	695	
+The hunter ran out of ammunition.	He reloaded the gun.	He aimed at the deer.	effect	0	696	
+He wanted to show me antlers.	He reloaded the gun.	He aimed at the deer.	effect	1	697	
+Marine life diminished.	Boats sailed through the ocean.	Oil spilled into the ocean.	cause	1	698	
+New countries were discovered.	Oil spilled into the ocean.	Boats sailed through the ocean.	cause	1	699	
+I ran the ice cube under warm water.	The ice cube vanished.	The ice cube stuck to my fingers.	effect	0	700	
+I touched the ice cube.	The ice cube stuck to my fingers.	The ice cube vanished.	effect	0	701	
+The customer came into the boutique.	The window display caught her eye.	She left her wallet at home.	cause	0	702	
+The customer was embarassed at the cash register.	The window display caught her eye.	She left her wallet at home.	cause	1	703	
+The man drank water with his meal.	His meal was spicy.	His meal was cold.	cause	0	704	
+The man asked the waiter to reheat his meal.	His meal was cold.	His meal was spicy.	cause	0	705	
+The woman stayed away from public places.	She was intoxicated.	She was contagious.	cause	1	706	
+The woman was not allowed to drive her car.	She was contagious.	She was intoxicated.	cause	1	707	
+The putrid odor filled the room.	I clamped my hand over my nose.	I put the rubber gloves on.	effect	0	708	
+I got ready to clean the room.	I put the rubber gloves on.	I clamped my hand over my nose.	effect	0	709	
+The employee missed work.	Her family got in touch with her.	There was a death in her family.	cause	1	710	
+The woman reconnected with distant relatives.	Her family got in touch with her.	There was a death in her family.	cause	0	711	
+The magnet attracted the paperclip.	The paperclip dropped from the magnet.	The paperclip stuck to the magnet.	effect	1	712	
+The magnet was too weak to attract the paperclip.	The paperclip stuck to the magnet.	The paperclip dropped from the magnet.	effect	1	713	
+The gardener pulled the weeds.	The weeds produced seeds.	The weeds came out of the soil.	effect	1	714	
+The gardener did not pull out the weeds.	The weeds came out of the soil.	The weeds produced seeds.	effect	1	715	
+We ordered a pizza.	The pizza got cold.	The pizza was delivered.	effect	1	716	
+We ordered a pizza but did not eat it all.	The pizza got cold.	The pizza was delivered.	effect	0	717	
+The teenager grew taller than his father.	He went through a growth spurt.	He joined the basketball team.	cause	0	718	
+The teenager made many new friends.	He joined the basketball team.	He went through a growth spurt.	cause	0	719	
+The patient underwent the risky medical procedure.	The procedure was costly.	Specialists recommended the procedure.	cause	1	720	
+The patient could not afford the medical procedure.	The procedure was costly.	Specialists recommended the procedure.	cause	0	721	
+The man caught his shirtsleeve on the rungs of the fence.	He hopped the fence.	The sleeve ripped.	effect	1	722	
+The man wearing a short-sleeved shirt ran away but there was a fence.	He hopped the fence.	The sleeve ripped.	effect	0	723	
+The investigators deemed the man's death a suicide.	He left a note.	He had children.	cause	0	724	
+The investigators notified the family of the man's death.	He had children.	He left a note.	cause	0	725	
+The computer crashed.	I downloaded a virus.	I backed up my files.	cause	0	726	
+I did not worry about my computer crashing.	I backed up my files.	I downloaded a virus.	cause	0	727	
+The girl's mouth ached.	She lost a tooth.	She swallowed her gum.	cause	0	728	
+The girl worried about a clogged gut.	She lost a tooth.	She swallowed her gum.	cause	1	729	
+The room was dim.	I opened the blinds.	I washed the windows.	effect	0	730	
+The room was dirty.	I opened the blinds.	I washed the windows.	effect	1	731	
+The father put his daughter in her stroller.	He was tired of carrying her.	She learned to walk.	cause	0	732	
+The father took his daughter out of her stroller.	She learned to walk.	He was tired of carrying her.	cause	0	733	
+The spy discovered the enemy's location.	The spy was hired by the government.	The spy bugged the enemy's phone.	cause	1	734	
+The spy had many fake passports.	The spy bugged the enemy's phone.	The spy was hired by the government.	cause	1	735	
+The glasses on the table spilled.	The child yanked the tablecloth.	The child drew on the table.	cause	0	736	
+The tablecloth needed to be washed.	The child yanked the tablecloth.	The child drew on the table.	cause	1	737	
+The water in the teapot started to boil.	The teapot whistled.	The teapot cooled.	effect	0	738	
+We forgot the water in the teapot.	The teapot whistled.	The teapot cooled.	effect	1	739	
+The city re-elected the mayor.	The mayor fulfilled his promises.	The city cut its budget.	cause	0	740	
+The city had spent too much money.	The city cut its budget.	The mayor fulfilled his promises.	cause	0	741	
+The woman exaggerated the details of the story.	She felt shy.	She wanted attention.	cause	1	742	
+The woman did not tell the story to anyone.	She felt shy.	She wanted attention.	cause	0	743	
+The woman hit a midlife crisis.	She went sky diving.	She retired.	effect	0	744	
+The woman did not want to work anymore.	She went sky diving.	She retired.	effect	1	745	
+The man went into denial about the tragedy.	He got over it easily.	He refused to talk about it.	effect	1	746	
+The man dealt well with the tragedy.	He refused to talk about it.	He got over it easily.	effect	1	747	
+The man grieved.	His mother passed away.	His wife criticized him.	cause	0	748	
+The man yelled at her.	His wife criticized him.	His mother passed away.	cause	0	749	
+The girl had a phobia of dogs.	She was bitten by a dog.	She rescued an abandoned dog.	cause	0	750	
+The girl got yet another dog.	She was bitten by a dog.	She rescued an abandoned dog.	cause	1	751	
+I made a resolution to eat a healthy diet.	I attended a yoga class.	I bought fruits and vegetables.	effect	1	752	
+I made a resolution to become fitter.	I attended a yoga class.	I bought fruits and vegetables.	effect	0	753	
+The patient went into a coma.	He suffered brain damage.	He suffered emotional trauma.	cause	0	754	
+The patient went into a fugue state.	He suffered emotional trauma.	He suffered brain damage.	cause	0	755	
+The friends' dinnertime conversation turned to politics.	The conversation quieted down.	A debate erupted.	effect	1	756	
+The friends' ran out of things to talk about.	The conversation quieted down.	A debate erupted.	effect	0	757	
+The woman spotted her friend from across the room.	The woman escaped.	The woman waved.	cause	1	758	
+The woman was not arrested by police.	The woman escaped.	The woman waved.	cause	0	759	
+The mother needed help looking after her children.	She sent the children to daycare.	She gave up custody of the children.	effect	0	760	
+The mother needed help looking after her children.	She sent the children to daycare.	She gave up custody of the children.	effect	1	761	
+The driver honked her horn.	Another car swerved into her lane.	She made a right turn at the light.	cause	0	762	
+The driver check her rear mirror for cyclists.	Another car swerved into her lane.	She made a right turn at the light.	cause	1	763	
+The man wanted to save money.	He cut back on making frivolous purchases.	He withdrew money from his savings account.	effect	0	764	
+The man wanted to spend money.	He cut back on making frivolous purchases.	He withdrew money from his savings account.	effect	1	765	
+I put shoes on.	The floor contained broken glass.	The paint on the walls was wet.	cause	0	766	
+The windows were left open.	The paint on the walls was wet.	The floor contained broken glass.	cause	0	767	
+The librarian located the book in the stacks.	I requested the librarian's help.	The book was checked out.	cause	0	768	
+The librarian told me that I couldn't borrow the book.	The book was checked out.	I requested the librarian's help.	cause	0	769	
+The mother became eye level with her son.	She held his hand.	She squatted down.	cause	1	770	
+The son had to walk as fast as his mother.	She held his hand.	She squatted down.	cause	0	771	
+I packed up my belongings.	I was hunting for a new apartment.	I was moving out of my apartment.	cause	1	772	
+I called several realtors.	I was hunting for a new apartment.	I was moving out of my apartment.	cause	0	773	
+The boy mimicked his older brother.	The boy looked up to his older brother.	The boy wrestled with his older brother.	cause	0	774	
+The boy broke his arm.	The boy looked up to his older brother.	The boy wrestled with his older brother.	cause	1	775	
+The girl desired her parent's approval.	She ran away from home.	She obeyed her parent's rules.	effect	1	776	
+The girl hated her parents.	She obeyed her parent's rules.	She ran away from home.	effect	1	777	
+The truck crashed into the motorcycle on the bridge.	The motorcyclist died.	The bridge collapsed.	effect	0	778	
+The truck crashed into the main pillar of the bridge.	The bridge collapsed.	The motorcyclist died.	effect	0	779	
+The retail shop shut down.	It renewed its lease.	Its sales were lagging.	cause	1	780	
+The retail shop stayed open for another year.	It renewed its lease.	Its sales were lagging.	cause	0	781	
+The swimmer won the race.	Her team lost the meet.	She received a gold medal.	effect	1	782	
+The swimmer did not win the race.	Her team lost the meet.	She received a gold medal.	effect	0	783	
+Air pollution in the city worsened.	Factories increased their production.	Factories shut down.	cause	0	784	
+Air qualtity in the city improved.	Factories increased their production.	Factories shut down.	cause	1	785	
+The mother scolded her daughter.	Her daughter set the kitchen table.	Her daughter burped at the kitchen table.	cause	1	786	
+The mother praised her daughter.	Her daughter set the kitchen table.	Her daughter burped at the kitchen table.	cause	0	787	
+I excused myself from the group.	I turned off my phone.	My phone rang.	cause	1	788	
+I did not get any calls.	I turned off my phone.	My phone rang.	cause	0	789	
+The skier slipped on the slope.	She dropped her ski poles.	She hit a patch of ice.	cause	1	790	
+The skier balanced only with her body.	She dropped her ski poles.	She hit a patch of ice.	cause	0	791	
+The print on the brochure was tiny.	The man retrieved a pen from his pocket.	The man put his glasses on.	effect	1	792	
+The man wanted to make a note.	The man retrieved a pen from his pocket.	The man put his glasses on.	effect	0	793	
+I flipped the light switch up and down.	The light faded.	The light flickered.	effect	1	794	
+I turned the light switch off.	The light faded.	The light flickered.	effect	0	795	
+The man's watch was broken.	He waited at the bus stop.	He asked a stranger for the time.	effect	1	796	
+The man arrived early.	He waited at the bus stop.	He asked a stranger for the time.	effect	0	797	
+The soldiers were concealed in the brush.	They were armed with rifles.	They wore camouflage uniforms.	cause	1	798	
+The soldiers had a lot of ammunition.	They were armed with rifles.	They wore camouflage uniforms.	cause	0	799	
+The man turned on the faucet.	Water flowed from the spout.	The toilet filled with water.	effect	0	800	
+The man flushed repeatedly.	The toilet filled with water.	Water flowed from the spout.	effect	0	801	
+The girl found a bug in her cereal.	She lost her appetite.	She poured milk in the bowl.	effect	0	802	
+The girl wanted to eat cereal.	She lost her appetite.	She poured milk in the bowl.	effect	1	803	
+The woman retired.	She paid off her mortgage.	She received her pension.	effect	1	804	
+The woman won the lottery.	She received her pension.	She paid off her mortgage.	effect	1	805	
+I wanted to conserve energy.	I swept the floor in the unoccupied room.	I shut off the light in the unoccupied room.	effect	1	806	
+My friend wanted to stay overnight.	I swept the floor in the unoccupied room.	I shut off the light in the unoccupied room.	effect	0	807	
+The hamburger meat browned.	The cook froze it.	The cook grilled it.	cause	1	808	
+The hamburger meat can be stored for a long time.	The cook grilled it.	The cook froze it.	cause	1	809	
+I doubted the salesman's pitch.	I turned his offer down.	He persuaded me to buy the product.	effect	0	810	
+I salesman's pitch was very good.	He persuaded me to buy the product.	I turned his offer down.	effect	0	811	
+I decided to stay home for the night.	My friends urged me to go out.	The forecast called for storms.	cause	1	812	
+I decided not to stay home.	My friends urged me to go out.	The forecast called for storms.	cause	0	813	
+My eyes became red and puffy.	I was laughing.	I was sobbing.	cause	1	814	
+My cheeks became red and puffy.	I was sobbing.	I was laughing.	cause	1	815	
+The flame on the candle went out.	I put a match to the wick.	I blew on the wick.	cause	1	816	
+The candle lit up.	I blew on the wick.	I put a match to the wick.	cause	1	817	
+The man drank heavily at the party.	He had a headache the next day.	He had a runny nose the next day.	effect	0	818	
+The man caught a cold on his way home.	He had a headache the next day.	He had a runny nose the next day.	effect	1	819	
+The bowling ball knocked over the bowling pins.	The man rolled the bowling ball down the alley.	The man dropped the bowling ball on his foot.	cause	0	820	
+The bowling ball did not knock over any bowling pins.	The man dropped the bowling ball on his foot.	The man rolled the bowling ball down the alley.	cause	0	821	
+The community learned of the man's death.	His obituary appeared in the newspaper.	His family buried him in the cemetery.	cause	0	822	
+The man did not get the burial at sea he wanted.	His family buried him in the cemetery.	His obituary appeared in the newspaper.	cause	0	823	
+My computer crashed.	I installed new speakers.	I lost all my data.	effect	1	824	
+My computer's sound didn't work.	I installed new speakers.	I lost all my data.	effect	0	825	
+The woman resigned from her job.	She believed her superiors were acting unethically.	She aspired to hold an executive position in the firm.	cause	0	826	
+The woman acquired an additional qualification for her job.	She believed her superiors were acting unethically.	She aspired to hold an executive position in the firm.	cause	1	827	
+The player caught the ball.	Her opponent tried to intercept it.	Her teammate threw it to her.	cause	1	828	
+The player could not see the ball.	Her opponent tried to intercept it.	Her teammate threw it to her.	cause	0	829	
+The judge pounded the gavel.	The jury announced its verdict.	The courtroom broke into uproar.	cause	1	830	
+The defendant listened anxiously.	The courtroom broke into uproar.	The jury announced its verdict.	cause	1	831	
+The woman banished the children from her property.	The children trampled through her garden.	The children hit a ball into her yard.	cause	0	832	
+The children rang the bell at the woman's house.	The children trampled through her garden.	The children hit a ball into her yard.	cause	1	833	
+The kidnappers released the hostage.	They escaped from jail.	They accepted ransom money.	cause	1	834	
+There was a nationwide manhunt for the kidnappers.	They accepted ransom money.	They escaped from jail.	cause	1	835	
+The cook's eyes watered.	He ran out of onions.	He cut an onion.	cause	1	836	
+The cook went to the market.	He ran out of onions.	He cut an onion.	cause	0	837	
+The woman ran her finger under cold water.	She burned her finger on the toaster.	She put a diamond ring on her finger.	cause	0	838	
+The woman got ready for a night out.	She put a diamond ring on her finger.	She burned her finger on the toaster.	cause	0	839	
+The student misspelled the word.	The teacher dismissed her.	The teacher corrected her.	effect	1	840	
+The student felt sick and wanted to go home.	The teacher corrected her.	The teacher dismissed her.	effect	1	841	
+I regained composure from my fit of anger.	I took deep breaths.	My heart pounded.	cause	0	842	
+I noticed that I was very nervous.	I took deep breaths.	My heart pounded.	cause	1	843	
+I put my hands under the running faucet.	The water splashed in my face.	The soap rinsed off my hands.	effect	1	844	
+I put my head under the running faucet.	The soap rinsed off my hands.	The water splashed in my face.	effect	1	845	
+The man dressed in his best suit.	He scheduled a meeting with an important client.	His wife bought him a new tie.	cause	0	846	
+The man was disappointed about his birthday present.	He scheduled a meeting with an important client.	His wife bought him a new tie.	cause	1	847	
+The man confessed his love for the woman.	The woman envied him.	The woman rejected him.	effect	1	848	
+The man showed his new car to the woman.	The woman rejected him.	The woman envied him.	effect	1	849	
+The driver got a flat tire.	He went over the speed limit.	He ran over a nail.	cause	1	850	
+The driver got a ticket.	He went over the speed limit.	He ran over a nail.	cause	0	851	
+My view of the movie screen was blocked.	The couple behind me was whispering.	A tall person was sitting in front of me.	cause	1	852	
+I could not enjoy the movie's beautiful soundtrack.	A tall person was sitting in front of me.	The couple behind me was whispering.	cause	1	853	
+The driver turned on the car's headlights.	The sun went down.	He heard thunder.	cause	0	854	
+The driver pulled up the roof of his convertible.	The sun went down.	He heard thunder.	cause	1	855	
+The girl refused to eat her vegetables.	Her father told her to drink her milk.	Her father took away her dessert.	effect	1	856	
+The girl was thirsty.	Her father took away her dessert.	Her father told her to drink her milk.	effect	1	857	
+The woman covered her mouth with her hand.	She sneezed.	She exhaled.	cause	0	858	
+The woman's friend noticed her bad breath.	She exhaled.	She sneezed.	cause	0	859	
+The secretary put the caller on hold.	The caller waited on the line.	The caller's phone lost reception.	effect	0	860	
+The caller drove through a long tunnel.	The caller's phone lost reception.	The caller waited on the line.	effect	0	861	
+The woman walked with crutches.	She broke her leg.	She shaved her legs.	cause	0	862	
+The woman's legs were smooth.	She shaved her legs.	She broke her leg.	cause	0	863	
+I coughed.	I inhaled smoke.	I lowered my voice.	cause	0	864	
+Only the person next to me could hear me speak.	I lowered my voice.	I inhaled smoke.	cause	0	865	
+The clock chimed.	It was the top of the hour.	The hour seemed to drag on.	cause	0	866	
+He was tired and stared at the clock.	It was the top of the hour.	The hour seemed to drag on.	cause	1	867	
+The chef hit the egg on the side of the bowl.	The egg cracked.	The egg rotted.	effect	0	868	
+The chef forgot to put the egg in the fridge.	The egg rotted.	The egg cracked.	effect	0	869	
+The police searched the offender's car.	They were looking for illegal drugs.	They were trying to elicit a confession.	cause	0	870	
+The police tortured the suspect.	They were looking for illegal drugs.	They were trying to elicit a confession.	cause	1	871	
+The couple travelled south for the winter.	They were separated.	They were retired.	cause	1	872	
+The couple did not live together.	They were retired.	They were separated.	cause	1	873	
+The man felt obligated to attend the event.	He promised his friend that he would go.	He turned down his friend's invitation to go.	cause	0	874	
+The friend was anggry at the man.	He turned down his friend's invitation to go.	He promised his friend that he would go.	cause	0	875	
+The bride got cold feet before the wedding.	The wedding guests brought gifts.	She called the wedding off.	effect	1	876	
+The bride made a wishlist.	The wedding guests brought gifts.	She called the wedding off.	effect	0	877	
+The man grew old.	He sold his belongings.	His hair turned gray.	effect	1	878	
+The man grew tired of having so many things.	He sold his belongings.	His hair turned gray.	effect	0	879	
+The friends decided to share the hamburger.	They ordered fries with the hamburger.	They cut the hamburger in half.	effect	1	880	
+The son told his parents that a hamburger is not enough.	They ordered fries with the hamburger.	They cut the hamburger in half.	effect	0	881	
+I twisted the cap off the soda bottle.	The soda leaked out.	The soda fizzed.	effect	1	882	
+The soda bottle had a hole.	The soda fizzed.	The soda leaked out.	effect	1	883	
+The pair of students came under scrutiny by the teacher.	The students both received excellent grades.	Their responses on the assignment were identical.	cause	1	884	
+The teacher praised the pair of students.	The students both received excellent grades.	Their responses on the assignment were identical.	cause	0	885	
+The student was in a rush to get to school on time.	He left his assignment at home.	He brought his lunch to school.	effect	0	886	
+The student enjoyed cooking.	He brought his lunch to school.	He left his assignment at home.	effect	0	887	
+The journalist wrote a biography about the humanitarian's life.	The humanitarian was difficult for the journalist to interview.	The journalist was intrigued by the humanitarian's work.	cause	1	888	
+The journalist did not write about the humanitarian.	The humanitarian was difficult for the journalist to interview.	The journalist was intrigued by the humanitarian's work.	cause	0	889	
+The man defied the authorities of the church.	He was excommunicated from the church.	He donated money to the church.	effect	0	890	
+The man is a long-time member of the church.	He donated money to the church.	He was excommunicated from the church.	effect	0	891	
+The woman's hair fell in her face.	She lathered shampoo into her hair.	She pulled her hair back with a clip.	effect	1	892	
+The woman began to wash her hair.	She lathered shampoo into her hair.	She pulled her hair back with a clip.	effect	0	893	
+The ring on my finger got stuck.	I chipped my fingernail.	My finger swelled.	cause	1	894	
+I cut my nails.	I chipped my fingernail.	My finger swelled.	cause	0	895	
+I pulled the rubber band.	It stretched.	It flung across the room.	effect	0	896	
+I shot the rubber band.	It stretched.	It flung across the room.	effect	1	897	
+I pressed my hand into the wet cement.	Cracks emerged in the cement.	My handprint dried in the cement.	effect	1	898	
+The hot sun shined onto the cement all summer.	Cracks emerged in the cement.	My handprint dried in the cement.	effect	0	899	
+My skin broke out into a rash.	I brushed against poison ivy in my yard.	I eradicated the poison ivy from my yard.	cause	0	900	
+I no longer broke out into a rash.	I eradicated the poison ivy from my yard.	I brushed against poison ivy in my yard.	cause	0	901	
+My subscription to the magazine expired.	I discarded the new issue.	I stopped receiving new issues.	effect	1	902	
+I already received a copy of the new magazine.	I stopped receiving new issues.	I discarded the new issue.	effect	1	903	
+The detective revealed an anomaly in the case.	He scrapped his theory.	He finalized his theory.	effect	0	904	
+The detective found the last piece of evidence in the case.	He finalized his theory.	He scrapped his theory.	effect	0	905	
+The boy threw a temper tantrum.	He shared his toys with his brother.	His brother took his toys from him.	cause	1	906	
+The boy had someone to play with.	His brother took his toys from him.	He shared his toys with his brother.	cause	1	907	
+The child learned how to read.	He skipped a grade in school.	He began attending school.	cause	1	908	
+The child was much smaller than his classmates.	He began attending school.	He skipped a grade in school.	cause	1	909	
+The boy skipped dinner.	He ate a big lunch.	His mother cooked his favorite meal.	cause	0	910	
+The boy rushed home for dinner.	He ate a big lunch.	His mother cooked his favorite meal.	cause	1	911	
+The woman lavished her friend with flattery.	She was irritated with her friend's whining.	She wanted to ask her friend for a favor.	cause	1	912	
+The woman yelled at her friend.	She wanted to ask her friend for a favor.	She was irritated with her friend's whining.	cause	1	913	
+The key was missing from my pants pocket.	The pants were new.	The pocket had a hole.	cause	1	914	
+The pants had no defects.	The pants were new.	The pocket had a hole.	cause	0	915	
+The man fainted.	He ran a marathon.	He took a nap.	cause	0	916	
+The man felt refreshed.	He ran a marathon.	He took a nap.	cause	1	917	
+The man lost the competition.	The competition was sabotaged.	He intimidated his competitors.	cause	0	918	
+The man won the competition.	The competition was sabotaged.	He intimidated his competitors.	cause	1	919	
+The mother called an ambulance.	Her son lost his cat.	Her son fell out of his bed.	cause	1	920	
+The mother called all neighbors.	Her son fell out of his bed.	Her son lost his cat.	cause	1	921	
+The driver slammed on his brakes.	The car radio shut off.	A deer appeared on the road.	cause	1	922	
+Everybody in the car stopped singing along.	The car radio shut off.	A deer appeared on the road.	cause	0	923	
+The lock opened.	I turned the key in the lock.	I made a duplicate of the key.	cause	0	924	
+I was less worried about losing the key.	I turned the key in the lock.	I made a duplicate of the key.	cause	1	925	
+I put rubber gloves on.	I was preparing to clean the bathroom.	I was preparing to wash my hands.	cause	0	926	
+I took off the rubber gloves.	I was preparing to clean the bathroom.	I was preparing to wash my hands.	cause	1	927	
+The animal species became endangered.	Their habitat was destroyed.	Their predators went extinct.	cause	0	928	
+The animal species became populous.	Their habitat was destroyed.	Their predators went extinct.	cause	1	929	
+The man perceived that the woman looked different.	The woman got her hair cut.	The woman wore a bracelet.	cause	0	930	
+The man noticed that the woman likes jewelry.	The woman got her hair cut.	The woman wore a bracelet.	cause	1	931	
+The student forgot to do her assignment.	She made up an excuse to tell the teacher.	The teacher promoted her to the next grade.	effect	0	932	
+The student got full points on all exams.	She made up an excuse to tell the teacher.	The teacher promoted her to the next grade.	effect	1	933	
+The dog barked.	The cat lounged on the couch.	A knock sounded at the door.	cause	1	934	
+The visitor used the old door knocker instead of the door bell.	The cat lounged on the couch.	A knock sounded at the door.	cause	0	935	
+Plans were announced to replace a local park with a shopping mall.	Environmentalists started a petition.	Environmentalists produced a documentary.	effect	0	936	
+An old coal mine was turned into a beautiful park.	Environmentalists started a petition.	Environmentalists produced a documentary.	effect	1	937	
+The couple was happy to see each other.	They rested.	They kissed.	effect	1	938	
+The couple was very tired.	They rested.	They kissed.	effect	0	939	
+The woman asked the man to leave.	He insulted her.	He thanked her.	cause	0	940	
+The woman made the man a compliment.	He thanked her.	He insulted her.	cause	0	941	
+The tree branch landed in the river.	The river's current became stronger.	The branch moved downstream.	effect	1	942	
+It rained a lot in the area around the river.	The river's current became stronger.	The branch moved downstream.	effect	0	943	
+The teacher assigned homework to the students.	The students passed notes.	The students groaned.	effect	1	944	
+The teacher turned his back to the class.	The students passed notes.	The students groaned.	effect	0	945	
+The seasons changed from summer to autumn.	Leaves fell from the trees.	People evacuated their homes.	effect	0	946	
+There was a big flood last autumn.	Leaves fell from the trees.	People evacuated their homes.	effect	1	947	
+The politician was convicted of fraud.	He campaigned for re-election.	He was removed from office.	effect	1	948	
+The politician was very popular.	He was removed from office.	He campaigned for re-election.	effect	1	949	
+I pushed the wagon.	The wagon wheels spun forward.	The objects in the wagon fell out.	effect	0	950	
+I opened the door of the wagon.	The objects in the wagon fell out.	The wagon wheels spun forward.	effect	0	951	
+The lobbyist persuaded the legislature to support the bill.	The president vetoed the bill.	The legislature passed the bill.	effect	1	952	
+The lobbyist persuaded the president that the bill was bad for business.	The president vetoed the bill.	The legislature passed the bill.	effect	0	953	
+My closet was messy.	I decorated it.	I organized it.	effect	1	954	
+My room looked boring.	I decorated it.	I organized it.	effect	0	955	
+I stayed up late.	I was tired in the morning.	I had vivid dreams that night.	effect	0	956	
+I saw a scary movie.	I was tired in the morning.	I had vivid dreams that night.	effect	1	957	
+The man's pocket jingled as he walked.	He sewed the hole in his pocket.	His pocket was filled with coins.	cause	1	958	
+The man did not lose coins in his pocket anymore.	His pocket was filled with coins.	He sewed the hole in his pocket.	cause	1	959	
+Everyone in the class turned to stare at the student.	The student's phone rang.	The student took notes.	cause	0	960	
+The teacher covered a lot of material.	The student's phone rang.	The student took notes.	cause	1	961	
+The horse bucked.	A fly bit the horse.	The rider stroked the horse.	cause	0	962	
+The horse calmed down.	The rider stroked the horse.	A fly bit the horse.	cause	0	963	
+The jewelry thieves were caught.	The stolen jewelry was returned to its owners.	The cost of the stolen jewelry was calculated.	effect	0	964	
+The jewelry thieves were never caught.	The stolen jewelry was returned to its owners.	The cost of the stolen jewelry was calculated.	effect	1	965	
+Political violence broke out in the nation.	Many citizens took refuge in other territories.	Many citizens relocated to the capitol.	effect	0	966	
+Political violence finally ended in the nation.	Many citizens relocated to the capitol.	Many citizens took refuge in other territories.	effect	0	967	
+The woman was arrested.	She committed assault.	She checked into rehab.	cause	0	968	
+The woman was an alcoholic.	She checked into rehab.	She committed assault.	cause	0	969	
+The woman read the newspaper.	She casted a vote in the election.	She discovered the outcome of the election.	effect	1	970	
+The woman went to the polling station.	She casted a vote in the election.	She discovered the outcome of the election.	effect	0	971	
+The sick child coughed on his friend.	His friend got sick.	His friend sneezed.	effect	0	972	
+The child sprinkled pepper in his friend's face.	His friend sneezed.	His friend got sick.	effect	0	973	
+The couple got engaged.	They took some time apart.	They planned a wedding.	effect	1	974	
+The couple had a big fight.	They took some time apart.	They planned a wedding.	effect	0	975	
+The woman contacted the real estate agent.	The woman planned to buy a condo.	The woman needed to clean her house.	cause	0	976	
+The woman contacted the maid service.	The woman needed to clean her house.	The woman planned to buy a condo.	cause	0	977	
+The man won the lottery.	He owed money.	He became rich.	effect	1	978	
+The man bought more than he could afford.	He owed money.	He became rich.	effect	0	979	
+I lit the candle.	Wax dripped off the candle.	The wax on the candle hardened.	effect	0	980	
+The candle burned out some time ago.	The wax on the candle hardened.	Wax dripped off the candle.	effect	0	981	
+I spent the day at the pool.	I sprained my ankle.	My face got sunburned.	effect	1	982	
+I slipped at the pool.	My face got sunburned.	I sprained my ankle.	effect	1	983	
+The man received a parking ticket.	He parallel parked on the street.	The parking meter expired.	cause	1	984	
+The man saw an empty parking spot.	The parking meter expired.	He parallel parked on the street.	cause	1	985	
+The woman became famous.	Her family avoided her.	Photographers followed her.	effect	1	986	
+The woman became senile.	Photographers followed her.	Her family avoided her.	effect	1	987	
+The girl wanted to wear earrings.	She got her ears pierced.	She got a tattoo.	effect	0	988	
+The girl wanted to have a symbol on her arm.	She got a tattoo.	She got her ears pierced.	effect	0	989	
+My ears were ringing.	I went to a museum.	I went to a concert.	cause	1	990	
+My mind was full of paintings.	I went to a concert.	I went to a museum.	cause	1	991	
+I tidied up my house.	I was swamped with work.	I was expecting company.	cause	1	992	
+I did not clean up my house.	I was expecting company.	I was swamped with work.	cause	1	993	
+The airline mishandled my luggage.	They cancelled my flight.	They offered me compensation.	effect	1	994	
+The airline went bankrupt.	They cancelled my flight.	They offered me compensation.	effect	0	995	
+The computer was expensive to fix.	I bought a new one.	I got it repaired.	effect	0	996	
+The computer was cheap to fix.	I got it repaired.	I bought a new one.	effect	0	997	
+The woman was in a bad mood.	She engaged in small talk with her friend.	She told her friend to leave her alone.	effect	1	998	
+The woman was in a good mood.	She told her friend to leave her alone.	She engaged in small talk with her friend.	effect	1	999	

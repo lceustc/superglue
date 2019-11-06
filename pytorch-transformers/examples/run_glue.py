@@ -461,7 +461,7 @@ def main():
                         help="Weight deay if we apply some.")
     parser.add_argument("--warmup", default=0.0, type=float,
                         help="Weight deay if we apply some.")
-    parser.add_argument("--p", default=0.7, type=float,
+    parser.add_argument("--p", default=0.3, type=float,
                         help="Weight deay if we apply some.")
     parser.add_argument("--adam_epsilon", default=1e-8, type=float,
                         help="Epsilon for Adam optimizer.")

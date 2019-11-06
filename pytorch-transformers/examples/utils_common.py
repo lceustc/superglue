@@ -167,8 +167,7 @@ class Mixout(object):
         self.p = p
         self.param = {}
         self.old_param = {}
-        self.pmodel_path = pmodel_path
-        static_dic = torch.load(self.pmodel_path+"/pytorch_model.bin")
+        static_dic = torch.load(pmodel_path+"/pytorch_model.bin")
         for k, v in static_dic.items():
             if "classifier" not in k:
                 self.old_param[k] = v
