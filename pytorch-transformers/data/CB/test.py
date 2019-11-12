@@ -54,16 +54,16 @@ file_list = [
 # # print(tmp.iloc[1900,[-1]])
 # for i in range(1901,len(tmp)):
 #     tmp.iloc[i,[-1]] = int(tmp.iloc[i,[-1]])+1
-#
-#
 # # print(tmp['idx'])
 # tmp = DataFrame(tmp)
 # tmp.to_csv("./temp.tsv",sep='\t',header=False,index=False)
-
-with  open("./train.jsonl","r") as f:
+i= 0
+with  open("./test.jsonl","r") as f:
     lines = f.readlines()
     for line in lines:
         line = json.loads(line)
         l1 = len(line["premise"].split(" "))
         l2 = len(line["hypothesis"].split(" "))
-        print(l1,l2)
+        if l1+l2 >123:
+            i+=1
+    print(1-(i/len(lines)))

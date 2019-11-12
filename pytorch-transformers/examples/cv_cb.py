@@ -313,7 +313,11 @@ def predict(args, model, tokenizer,is_evaluate=False,is_predict=False):
                 preds = np.append(preds, logits.detach().cpu().numpy(), axis=0)
                 out_label_ids = np.append(out_label_ids,labels.detach().cpu().numpy(), axis=0) if is_evaluate else None
 
+
         preds = softmax(preds,axis=1)
+
+        if args.vote:
+            preds = np.argmax(preds,axis=1)
 
     return preds,out_label_ids
 
@@ -406,6 +410,8 @@ def main():
                         help="Whether to run predict.")
     parser.add_argument("--do_eval", action='store_true',
                         help="Whether to run eval on the dev set.")
+    parser.add_argument("--vote", action='store_true',
+                        help="Whether to run eval on the dev set.")
     parser.add_argument("--evaluate_during_training", action='store_true',
                         help="Rul evaluation during training at each logging step.")
     parser.add_argument("--do_lower_case", action='store_true',
@@ -484,6 +490,7 @@ def main():
                         level = logging.INFO if args.local_rank in [-1, 0] else logging.WARN)
     # Set seed
     set_seed(args)
+    logger.info("Training/evaluation parameters %s", args)
 
     # Prepare GLUE task
     args.task_name = args.task_name.lower()
@@ -510,7 +517,7 @@ def main():
 
     # Training
     if args.do_train:
-        train_examples = pd.read_csv('/data/lce/pytorch-transformers/data/'+str(args.task_name).upper()+'/train.tsv', sep='\t',header=None if args.task_name in ["copa"] else 1)
+        train_examples = pd.read_csv('/data/lce/pytorch-transformers/data/'+str(args.task_name).upper()+'/train_all.tsv', sep='\t',header=None)
         data1 = DataFrame(train_examples)
         skf = StratifiedKFold(n_splits=5)
         del train_examples
@@ -526,18 +533,28 @@ def main():
     if args.do_eval and args.local_rank in [-1, 0]:
         checkpoints = list(os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + '/**/' + WEIGHTS_NAME, recursive=True)))
         result = None
+
         for checkpoint in checkpoints:
-            # if not ("cv_eda_at/7" in checkpoint or "cv_cb/3" in checkpoint):
+            # if not ("RTE/3" in checkpoint or "RTE/7" in checkpoint or 'RTE/42' in checkpoint or 'RTE/87' in checkpoint):
             #     continue
             model = model_class.from_pretrained(checkpoint)
             model.to(args.device)
             if result is None:
                 result,label = predict(args, model, tokenizer,is_evaluate=True)
+                if args.vote:
+                    vote_l = np.zeros([len(label),num_labels],dtype=np.int32)
+                    for i in range(len(result)):
+                        vote_l[i][result[i]] +=1
             else:
                 tmp,_= predict(args,model,tokenizer,is_evaluate=True)
-                result += tmp
+                if args.vote:
+                    for i in range(len(tmp)):
+                        vote_l[i][result[i]] +=1
+                else:
+                    result += tmp
             del model;import gc;gc.collect();torch.cuda.empty_cache()
-        result = np.argmax(result,axis=1)
+
+        result = np.argmax(result,axis=1) if not args.vote else np.argmax(vote_l,axis=1)
         if args.task_name in ['cb']:
             nnn = acc_and_f1(result,label,average="macro")
             for k, v in nnn.items():
@@ -550,8 +567,8 @@ def main():
             os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + '/**/' + WEIGHTS_NAME, recursive=True)))
         result = None
         for checkpoint in checkpoints:
-            if not ("cv_eda_at/7" in checkpoint or "cv_cb/3" in checkpoint):
-                continue
+            # if not ("cv_eda_at/7" in checkpoint or "cv_cb/50" in checkpoint ):
+            #     continue
             model = model_class.from_pretrained(checkpoint)
             model.to(args.device)
             if result is None:
@@ -570,6 +587,8 @@ def main():
             for i in range(len(result)):
                 label_i = label_list[result[i]]
                 writer.write("{\"idx\": %d, \"label\": \"%s\"}\n" % (i, label_i))
+
+
 
     return None
 

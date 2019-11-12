@@ -45,7 +45,7 @@ from pytorch_transformers import AdamW, WarmupLinearSchedule
 
 from utils_glue import (compute_metrics, convert_examples_to_features,output_modes, processors,select_field)
 
-from utils_common import AdversarialTraining,Mixout
+from utils_common import AdversarialTraining,Mixout,gen_badcase
 
 
 logger = logging.getLogger(__name__)
@@ -201,14 +201,14 @@ def train(args, train_dataset, model, tokenizer):
                     ad.restore(model)
                 if  args.freeLB>0:
                     n = (50265 * 1024) ** 0.5
-                    theta = np.random.uniform(-args.epsilon, args.epsilon, (50265, 1024)) / n
-                    theta = torch.tensor(theta, dtype=torch.float32).cuda()
+                    theta = (-args.epsilon - args.epsilon) * torch.rand([50265,1024],dtype=torch.float32) + args.epsilon
+                    theta = (theta/n).cuda()
                     g = {}
                     for i in range(args.K):
-                        ad.disturb(model, False, theta)
+                        ad.disturb(model, is_virtual=False, sigma=theta)
                         for (inputs, labels) in data:
                             outputs = model(**inputs)
-                            loss = crossEntropy(outputs[0], labels)
+                            loss = crossEntropyLoss(outputs[0], labels)
                             if args.n_gpu > 1:
                                 loss = loss.mean()  # mean() to average on multi-gpu parallel training
                             if args.gradient_accumulation_steps > 1:
@@ -218,20 +218,23 @@ def train(args, train_dataset, model, tokenizer):
                         for c, v in model.named_parameters():
                             if v.requires_grad and v.grad is not None:
                                 if c not in g:
-                                    g[c] = v.grad / k
+                                    g[c] = v.grad / args.K
                                 else:
-                                    g[c] += v.grad / k
+                                    g[c] += v.grad / args.K
                             if "word_embeddings" in c:
                                 g_adv = v.grad
-                        theta += alpha * g_adv / torch.norm(g_adv, p="fro")
-                        theta = torch.clamp(theta, -epsilon, epsilon)
+
+                        a = args.freeLB_alpha * g_adv
+                        b = a/torch.norm(g_adv,p="fro")
+                        theta = theta+b
+                        theta = torch.clamp(theta, -args.epsilon, args.epsilon)
                         model.zero_grad()
                     for c, v in model.named_parameters():
                         if c in g:
                             if v.grad is None:
                                 v.grad = g[c]
                             else:
-                                v.grad += g[c]
+                                v.grad.add_(g[c])
                     del g, c, v, theta, g_adv;
                     import gc;
                     gc.collect()
@@ -254,7 +257,7 @@ def train(args, train_dataset, model, tokenizer):
                         results = evaluate(args, model, tokenizer,prefix=str(args.seed)+"-"+str(global_step))
                         for key, value in results.items():
                             tb_writer.add_scalar('eval_{}'.format(key), value, global_step)
-                        if args.save_steps > 0 and results['acc'] >= 0.92:
+                        if args.save_steps > 0 and results["acc"]>=0.94:
                             # Save model checkpoint
                             output_dir = os.path.join(args.output_dir,
                                                       'checkpoint-{}-{}'.format(global_step, results['acc']))
@@ -273,7 +276,7 @@ def train(args, train_dataset, model, tokenizer):
                 epoch_iterator.close()
                 break
         #!!!!!!!!!!!!!!!!
-        results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
+        # results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
         #!!!!!!!!!!!!!!!!!
 
         if 0 < args.max_steps < global_step:
@@ -323,6 +326,8 @@ def evaluate(args, model, tokenizer, prefix=""):
 
                 eval_loss += tmp_eval_loss.mean().item()
             nb_eval_steps += 1
+            if args.badcase:
+                gen_badcase(inputs["input_ids"],inputs["labels"],logits,tokenizer,args.task_name)
             if preds is None:
                 preds = logits.detach().cpu().numpy()
                 out_label_ids = inputs['labels'].detach().cpu().numpy()
@@ -436,6 +441,8 @@ def main():
                         help="Whether to run predict.")
     parser.add_argument("--is_margin", action='store_true',
                         help="Whether to run predict.")
+    parser.add_argument("--badcase", action='store_true',
+                        help="Whether to run predict.")
     parser.add_argument("--is_mixout", action='store_true',
                         help="Whether to run predict.")
     parser.add_argument("--do_eval", action='store_true',
@@ -463,9 +470,15 @@ def main():
                         help="Weight deay if we apply some.")
     parser.add_argument("--p", default=0.3, type=float,
                         help="Weight deay if we apply some.")
+    parser.add_argument("--K", default=3, type=int,
+                        help="Weight deay if we apply some.")
+    parser.add_argument("--epsilon", default=0.15, type=float,
+                        help="Weight deay if we apply some.")
     parser.add_argument("--adam_epsilon", default=1e-8, type=float,
                         help="Epsilon for Adam optimizer.")
     parser.add_argument("--alpha", default=0.37, type=float,
+                        help="Epsilon for Adam optimizer.")
+    parser.add_argument("--freeLB_alpha", default=0.03, type=float,
                         help="Epsilon for Adam optimizer.")
     parser.add_argument("--max_grad_norm", default=1.0, type=float,
                         help="Max gradient norm.")
@@ -551,12 +564,13 @@ def main():
     config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     config = config_class.from_pretrained(args.config_name if args.config_name else args.model_name_or_path, num_labels=num_labels, finetuning_task=args.task_name)
     tokenizer = tokenizer_class.from_pretrained(args.tokenizer_name if args.tokenizer_name else args.model_name_or_path, do_lower_case=args.do_lower_case)
-    model = model_class.from_pretrained(args.model_name_or_path, from_tf=bool('.ckpt' in args.model_name_or_path), config=config)
-
+    if args.do_train:
+        model = model_class.from_pretrained(args.model_name_or_path, from_tf=bool('.ckpt' in args.model_name_or_path), config=config)
+        model.to(args.device)
     if args.local_rank == 0:
         torch.distributed.barrier()  # Make sure only the first process in distributed training will download model & vocab
 
-    model.to(args.device)
+
 
     logger.info("Training/evaluation parameters %s", args)
 
@@ -591,20 +605,20 @@ def main():
 
 
     # # Evaluation
-    # results = {}
-    # if args.do_eval and args.local_rank in [-1, 0]:
-    #     checkpoints = [args.output_dir]
-    #     if args.eval_all_checkpoints:
-    #         checkpoints = list(os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + '/**/' + WEIGHTS_NAME, recursive=True)))
-    #         logging.getLogger("pytorch_transformers.modeling_utils").setLevel(logging.WARN)  # Reduce logging
-    #     logger.info("Evaluate the following checkpoints: %s", checkpoints)
-    #     for checkpoint in checkpoints:
-    #         global_step = checkpoint.split('-')[-1] if len(checkpoints) > 1 else ""
-    #         model = model_class.from_pretrained(checkpoint)
-    #         model.to(args.device)
-    #         result = evaluate(args, model, tokenizer, prefix=global_step)
-    #         result = dict((k + '_{}'.format(global_step), v) for k, v in result.items())
-    #         results.update(result)
+    results = {}
+    if args.do_eval and args.local_rank in [-1, 0]:
+        checkpoints = [args.output_dir]
+        if args.eval_all_checkpoints:
+            checkpoints = list(os.path.dirname(c) for c in sorted(glob.glob(args.output_dir + '/**/' + WEIGHTS_NAME, recursive=True)))
+            logging.getLogger("pytorch_transformers.modeling_utils").setLevel(logging.WARN)  # Reduce logging
+        logger.info("Evaluate the following checkpoints: %s", checkpoints)
+        for checkpoint in checkpoints:
+            global_step = checkpoint.split('-')[-1] if len(checkpoints) > 1 else ""
+            model = model_class.from_pretrained(checkpoint)
+            model.to(args.device)
+            result = evaluate(args, model, tokenizer, prefix=global_step)
+            # result = dict((k + '_{}'.format(global_step), v) for k, v in result.items())
+            # results.update(result)
 
     # #predict
     # if args.do_predict:

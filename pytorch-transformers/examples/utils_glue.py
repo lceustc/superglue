@@ -384,7 +384,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
                               input_mask=input_mask,
                               segment_ids=segment_ids,
                               label_id=label_id))
-            if ex_index < 1 and len(examples) > 300:
+            if ex_index < 0 and len(examples) > 300:
                 logger.info("*** Example ***")
                 logger.info("guid: %s" % (example.guid))
                 logger.info("tokens: %s" % " ".join(
@@ -446,7 +446,7 @@ class COPAProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         """See base class."""
         return self._create_examples(
-            self._read_jsonl(os.path.join(data_dir, "val.jsonl")), "val")
+            self._read_jsonl(os.path.join(data_dir, "btest.jsonl")), "val")
 
     def get_test_examples(self, data_dir):
         return self._create_examples(

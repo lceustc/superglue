@@ -156,25 +156,30 @@ class RteProcessor(DataProcessor):
     def get_train_examples(self, data_dir,idx):
         """See base class."""
         return self._create_examples(
-            self._read_jsonl(os.path.join(data_dir, "train.jsonl")), "train",idx)
+            self._read_jsonl(os.path.join(data_dir, "train_all.jsonl")), "train",idx)
 
-    def get_dev_examples(self, data_dir,idx):
+    def get_dev_examples(self, data_dir,idx,cv_train=False):
         """See base class."""
-        return self._create_examples(
-            self._read_jsonl(os.path.join(data_dir, "train.jsonl")), "val",idx)
+        if cv_train:
+            return self._create_examples(
+                self._read_jsonl(os.path.join(data_dir, "train_all.jsonl")), "val", idx)
+        else:
+            return self._create_examples(
+                self._read_jsonl(os.path.join(data_dir, "val.jsonl")), "val", idx)
+
 
     def get_labels(self):
         """See base class."""
         return ["not_entailment" , "entailment"]
 
     def get_test_examples(self, data_dir):
-        return self._create_examples(self._read_jsonl(os.path.join(data_dir, "test.jsonl")), "test")
+        return self._create_examples(self._read_jsonl(os.path.join(data_dir, "test.jsonl")), "test",None)
 
     def _create_examples(self, lines, set_type,idx):
         """Creates examples for the training and dev sets."""
         examples = []
         for (i, line) in enumerate(lines):
-            if int(line["idx"]) not in idx :
+            if idx is not None and int(line["idx"]) not in idx :
                 continue
             guid = "%s-%s" % (set_type, line["idx"])
             text_a = line["premise"]
@@ -384,7 +389,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
                               input_mask=input_mask,
                               segment_ids=segment_ids,
                               label_id=label_id))
-            if ex_index < 1 and len(examples) > 300:
+            if ex_index < 1:
                 logger.info("*** Example ***")
                 logger.info("guid: %s" % (example.guid))
                 logger.info("tokens: %s" % " ".join(

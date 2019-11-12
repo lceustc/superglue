@@ -67,8 +67,8 @@ class AdversarialTraining(object):
     """
         only store gradient, remove replace/inplcae operation
     """
-    DISTURB_WEIGHTS = ['embeddings']
-    # DISTURB_WEIGHTS = ['word_embeddings']
+    # DISTURB_WEIGHTS = ['embeddings']
+    DISTURB_WEIGHTS = ['word_embeddings']
     BIAS = 1e-8
 
 
@@ -85,7 +85,7 @@ class AdversarialTraining(object):
         if sigma is not None:
             for name, param in model.named_parameters():
                 if "word_embedding" in name:
-                    param.data.add_(-sigma)
+                    param.data.add_(-sigma.cuda())
             del param,sigma;import gc;gc.collect();torch.cuda.empty_cache()
         else:
             for name, param in model.named_parameters():
@@ -103,7 +103,7 @@ class AdversarialTraining(object):
         for name, param in model.named_parameters():
             if param.requires_grad and any([n in name for n in self.DISTURB_WEIGHTS]):
                 if sigma is not None:
-                    param.data.add_(sigma)
+                    param.data.add_(sigma.cuda())
                     # self.backup_data[name] = sigma
                     del sigma;import gc;gc.collect();torch.cuda.empty_cache()
                 else:
@@ -239,3 +239,16 @@ def create_soft_labels(config_file):
         results.append([1 - example_result, example_result])  #
 
     return results
+
+
+def gen_badcase(input_ids,labels,logits,tokenizer,task_name):
+    f = open("./"+str(task_name)+"_bad_case.txt","a")
+    for idx,data in enumerate(zip(input_ids,logits,labels)):
+        if torch.argmax(data[1],dim=-1) != data[2]:
+            input_char = tokenizer.decode(list(data[0].cpu().numpy()))
+            if task_name in ["cb","rte"]:
+                f.write("premise:  "+str(input_char[0])+"\n")
+                f.write("hypothesis:  "+str(input_char[1])+"\n")
+                f.write(str(data[1].cpu().numpy())+"\t"+str(data[2].cpu().numpy())+"\n")
+                f.write("\n")
+    f.close()

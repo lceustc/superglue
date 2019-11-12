@@ -1,0 +1,120 @@
+premise:  Yet, we now are discovering that antibiotics are losing their effectiveness against illness. Disease-causing bacteria are mutating faster than we can come up with new antibiotics to fight the new variations.
+hypothesis:  Bacteria is winning the war against antibiotics.
+[ 0.34936854 -0.7007755 ]	1
+
+premise:  Mice given a substance found in red wine lived longer despite a fatty diet, a study shows.
+hypothesis:  Mice fed with red wine lived longer despite a fatty diet.
+[-2.6268344  2.4159203]	0
+
+premise:  He became a boxing referee in 1964 and became most well-known for his decision against Mike Tyson, during the Holyfield fight, when Tyson bit Holyfield's ear.
+hypothesis:  Mike Tyson bit Holyfield's ear in 1964.
+[-0.8638072   0.56465393]	0
+
+premise:  Mount Redoubt, a volcano in Alaska, erupted on Saturday, sending out clouds of ash thousands of feet high. According to the Federal Aviation Administration, the Ted Stevens Anchorage International Airport was shut down after ash reached the airport. Jeremy Lindseth, a spokesman for the airport, said that only small amount of ash reached the airport, but was significant enough to disrupt operations, as ash can cause engine problems for aircraft. He said that he was uncertain of how many flights were affected due to the eruption.
+hypothesis:  The Ted Stevens Anchorage International Airport is the employer of Jeremy Lindseth.
+[ 1.8088666 -2.0140753]	1
+
+premise:  Ssangyong Motor was taken over by creditors after it collapsed under heavy debts during the 1997-98 Asian financial crisis.
+hypothesis:  Asian financial crisis takes over Ssangyong Motor
+[-2.0662692  1.8134953]	0
+
+premise:  NASA's two Great Observatories, the Hubble Space Telescope and the Chandra X-ray Observatory, have independently provided what could be the best direct evidence yet for the existence of an event horizon, the defining feature of a black hole.
+hypothesis:  Hubble discovers black holes.
+[ 1.3351253 -1.5880569]	1
+
+premise:  For US pharmaceutical companies, the impending healthcare reforms promise an era of increased cost-containment and pricing controls.
+hypothesis:  The US government wants to keep drug prices down.
+[ 1.5055863 -1.4241385]	1
+
+premise:  About 33.5 million people live in this massive conurbation. I would guess that 95% of the 5,000 officially foreign-capital firms in Japan are based in Tokyo.
+hypothesis:  About 33.5 miilion people live in Tokyo.
+[ 0.5353707 -0.5711424]	1
+
+premise:  The Disneyland of Europe is located 20 miles east of Paris. Euro Disney is a huge complex with hotels, restaurants, shops and a nearby golf course apart from the actual theme park. It provides a much better experience than its American cousin thanks to the marvels of modern engineering.
+hypothesis:  Euro-Disney is an Entertainment Park.
+[ 1.3537629 -1.6763113]	1
+
+premise:  The official visit of the Argentine minister marks a further step in the normalisation of UK-Argentine relations.
+hypothesis:  Relations between Argentina and Great Britain are growing more cooperative.
+[-1.1511949  1.0680624]	0
+
+premise:  The Massachusetts Supreme Judicial Court has cleared the way for lesbian and gay couples in the state to marry, ruling that government attorneys "failed to identify any constitutionally adequate reason" to deny them the right.
+hypothesis:  U.S. Supreme Court in favor of same-sex marriage
+[ 1.8530867 -2.0582874]	1
+
+premise:  Ren and Stimpy. Bugs Bunny. Philip J. Fry and Professor Hubert Farnsworth on Futurama. Sparx. Bi-Polar Bear. Popeye the Sailor Man. Woody Woodpecker. You may not think you have ever heard Billy West, but chances are on a television program, a movie, a commercial, or as Howard Stern's voice guru in the 1990's, you have heard him. West's talent for creating personalities by twisting his voice has made him one of a handful of voice actors - Hank Azaria and the late Mel Blanc
+hypothesis:  Bugs Bunny is owned by Warner Bros.
+[ 1.8523295 -1.7429385]	1
+
+premise:  Confident that those grading papers would understand answers written in text-speak, Haque stressed that in some exams, including English, text abbreviations would be penalized.
+hypothesis:  Haque wants to include English in some exams.
+[-0.5957696   0.28097332]	0
+
+premise:  Cote d'Ivoire's President, Laurent Gbagbo, promulgated new election laws on July 14.
+hypothesis:  President Laurent Gbagbo lives in Cote d'Ivoire.
+[ 0.3111223  -0.13162127]	1
+
+premise:  On July 12 Portuguese President Jorge Sampaio asks Pedro Santana Lopes to form a government. The new government is sworn in on July 17 and includes António Monteiro as foreign minister, Daniel Sanches as interior minister, and António Bago Flix as finance minister; Paulo Portas remains defense minister.
+hypothesis:  New Portuguese prime minister is elected.
+[ 0.6980896  -0.95119226]	1
+
+premise:  Mount Olympus towers up from the center of the earth.
+hypothesis:  Mount Olympus is in the center of the earth.
+[ 1.472642  -1.8571159]	1
+
+premise:  It's Only a Play is Terrence McNally's "Give My Regards to Broadway," a lightweight tribute to the theater as seen from the lofty but limited vantage point of Broadway artists who are consumed by New York's hit/flop mentality.
+hypothesis:  Broadway is in New York.
+[ 1.0378015 -1.2598296]	1
+
+premise:  Though the exact date is debated, dogs are thought to have been domesticated by humans approximately 12,000 years ago.
+hypothesis:  Humans existed 10,000 years ago.
+[ 1.3328235 -1.5186241]	1
+
+premise:  Wilson has, after all, produced all three Offspring albums, including "Smash," the one that has astonished everybody by selling 1 million copies in four months, establishing the heretofore unknown group as the leader, with Green Day, of an unprecedented wave of commercial success for punk.
+hypothesis:  Smash is the title of the third album of the Offspring.
+[-2.282121  2.097269]	0
+
+premise:  Ahern, who was travelling to Tokyo for an EU-Japan summit yesterday, will consult with other EU leaders by telephone later this week in an effort to find an agreed candidate.
+hypothesis:  A summit between Europe and Japan is taking place in the Japanise capital.
+[ 0.42512897 -0.30855244]	1
+
+premise:  General Miguel Maza Marquez, chief of the Colombian Administrative Department Of Security (DAS), today confirmed foreign participation in the assassination of Luis Carlos Galan, senator and Liberal party presidential candidate, on 18 August in Bogota.
+hypothesis:  General Miguel Maza Marquez took part in the assassination of Luis Carlos Galan.
+[-2.1919978  1.9684106]	0
+
+premise:  A farmer who was in contact with cows suffering from BSE -- the so-called mad cow disease -- has died from what is regarded as the human form of the disease.
+hypothesis:  Bovine spongiform encephalopathy is another name for the "mad cow disease".
+[ 0.34668687 -0.5544821 ]	1
+
+premise:  Texas Data Recovery is also successful at retrieving lost data from notebooks and laptops, regardless of age, make or model.
+hypothesis:  In the event of a disaster you could use Texas Data Recovery and you will have the capability to restore lost data.
+[ 1.5386505 -1.2470899]	1
+
+premise:  The mistaken spelling, Miller explained, was made in a section of her notes unrelated to the interviews with Libby.  Other notes documented 3 interviews with Libby, conducted in the year 2003, that in her NYT column she wrote: June 23)... Mr. Libby raised the subject of Mr. Wilson's wife for the first time. I wrote in my notes, inside parentheses, "Wife works in bureau?" I told Mr. Fitzgerald that I believed this was the first time I had been told that Mr. Wilson's wife might work for the C.
+hypothesis:  Judith Miller works for the New York Times.
+[ 0.7561714 -0.7921866]	1
+
+premise:  The girl was found in Drummondville.
+hypothesis:  Drummondville contains the girl.
+[-2.3136883  2.0763462]	0
+
+premise:  Released in 1995, Tyson returned to boxing, winning the World Boxing Council title in 1996. The same year, however, he lost to Evander Holyfield, and in a 1997 rematch bit Holyfield's ear, for which he was temporarily banned from boxing.
+hypothesis:  In 1996 Mike Tyson bit Holyfield's ear.
+[-2.0267346  1.7479168]	0
+
+premise:  Sheriff's officials said a robot could be put to use in Ventura County, where the bomb squad has responded to more than 40 calls this year.
+hypothesis:  Police use robots for bomb-handling.
+[ 1.7046623 -1.8932798]	1
+
+premise:  High dietary intake of potassium from fruits and vegetables throughout one's life helps to preserve bone mass, thereby preventing bone loss that can lead to osteoporosis.
+hypothesis:  Dietary intake of potassium prevents osteoporosis.
+[ 0.946523  -1.3805658]	1
+
+premise:  The most sought after piece and the most expensive item was a bronze bust of Spencer Tracy that Hepburn created in the 1960s.
+hypothesis:  The highest-selling item was a bronze bust made by Hepburn in the 1960s of her actor lover Spencer Tracy.
+[ 1.6841772 -1.4749892]	1
+
+premise:  Kozlowski and the company's former chief financial officer, Mark Swartz, were sentenced, on Monday, to up to 25 years in prison.
+hypothesis:  Kozlowski was sentenced, Monday, to serve up to 25 years in prison.
+[ 0.56033903 -0.94095194]	1
+
