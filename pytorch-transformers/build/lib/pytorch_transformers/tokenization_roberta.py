@@ -202,3 +202,11 @@ class RobertaTokenizer(PreTrainedTokenizer):
                 index += 1
 
         return vocab_file, merge_file
+
+    def _bpe_piece_tokenize(self, token):
+        """tokenize pieces into subword tokens"""
+        if sys.version_info[0] == 2:
+            token = ''.join(self.byte_encoder[ord(b)] for b in token)
+        else:
+            token = ''.join(self.byte_encoder[b] for b in token.encode('utf-8'))
+        return self.bpe(token).split(' ')

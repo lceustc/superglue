@@ -18,6 +18,7 @@
 from __future__ import absolute_import, division, print_function
 
 import csv
+import spacy
 import logging
 import os
 import sys
@@ -50,6 +51,32 @@ class InputExample(object):
         self.text_b = text_b
         self.label = label
         self.answer_text = answer_text
+class WiCExample(object):
+    """A single training/test example for simple sequence classification."""
+
+    def __init__(self, guid, text_a, text_b, label, start1,start2,end1,end2,word,pos1,pos2):
+        """Constructs a InputExample.
+
+        Args:
+            guid: Unique id for the example.
+            text_a: string. The untokenized text of the first sequence. For single
+            sequence tasks, only this sequence must be specified.
+            text_b: (Optional) string. The untokenized text of the second sequence.
+            Only must be specified for sequence pair tasks.
+            label: (Optional) string. The label of the example. This should be
+            specified for train and dev examples, but not for test examples.
+        """
+        self.guid = guid
+        self.text_a = text_a
+        self.text_b = text_b
+        self.label = label
+        self.start1 = start1
+        self.start2 = start2
+        self.end1 = end1
+        self.end2 = end2
+        self.word = word
+        self.pos1 = pos1
+        self.pos2 = pos2
 
 class COPAExample(object):
     def __init__(self,mtc_id,premise,question,choice0,choice1,label=None):
@@ -97,6 +124,16 @@ class InputFeatures(object):
         self.input_mask = input_mask
         self.segment_ids = segment_ids
         self.label_id = label_id
+
+class WicFratures(object):
+    def __init__(self, input_ids, input_mask, segment_ids, label_id,mask_p1,mask_p2,pos):
+        self.input_ids = input_ids
+        self.input_mask = input_mask
+        self.segment_ids = segment_ids
+        self.label_id = label_id
+        self.mask_p1 = mask_p1
+        self.mask_p2 = mask_p2
+        self.pos = pos
 
 
 class DataProcessor(object):
@@ -149,7 +186,48 @@ class DataProcessor(object):
 
 
 
+class WiCProcessor(DataProcessor):
+    """Processor for the RTE data set (GLUE version)."""
 
+    def get_train_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_jsonl(os.path.join(data_dir, "train1.jsonl")), "train")
+
+    def get_dev_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_jsonl(os.path.join(data_dir, "val1.jsonl")), "val")
+
+    def get_labels(self):
+        """See base class."""
+        return ["true" , "false"]
+
+    def get_test_examples(self, data_dir):
+        return self._create_examples(self._read_jsonl(os.path.join(data_dir, "test.jsonl")), "test")
+
+    def _create_examples(self, lines, set_type):
+        """Creates examples for the training and dev sets."""
+        examples = []
+        for (i, line) in enumerate(lines):
+            guid = "%s-%s" % (set_type, line["idx"])
+            text_a = line["sentence1"]
+            text_b = line["sentence2"]
+            if set_type in ["train", "val"]:
+                label = str(line["label"]).lower()
+            else:
+                label = "false"
+            word = line["word"]
+            start1 = line["start1"]
+            start2 = line["start2"]
+            end1 = line["end1"]
+            end2 = line["end2"]
+            pos1 = line["pos1"]
+            pos2 = line["pos2"]
+            examples.append(
+                WiCExample(guid=guid, text_a=text_a, text_b=text_b, label=label,word=word,
+                           start1=start1,start2=start2,end1=end1,end2=end2,pos1 = pos1,pos2=pos2))
+        return examples
 
 class RteProcessor(DataProcessor):
     """Processor for the RTE data set (GLUE version)."""
@@ -185,6 +263,7 @@ class RteProcessor(DataProcessor):
                 label = "entailment"
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+            break
         return examples
 
 
@@ -209,7 +288,160 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
             - True (XLNet/GPT pattern): A + [SEP] + B + [SEP] + [CLS]
         `cls_token_segment_id` define the segment id associated to the CLS token (0 for BERT, 2 for XLNet)
     """
-    if is_mtc:
+    if task_name in ["wic"]:
+        nlp = spacy.load("en_core_web_sm")
+        POS_LABELS = [
+            "SPACE",  # space
+            "ADJ",  # adjective                  big, old, green, incomprehensible, first
+            "ADP",  # adposition                 in, to, during
+            "ADV",  # adverb                     very, tomorrow, down, where, there
+            "AUX",  # auxiliary                  is, has (done), will (do), should (do)
+            "CONJ",  # conjunction                and, or, but
+            "CCONJ",  # coordinating conjunction   and, or, but
+            "DET",  # determiner                 a, an, the
+            "INTJ",  # interjection               psst, ouch, bravo, hello
+            "NOUN",  # noun                       girl, cat, tree, air, beauty
+            "NUM",  # numeral                    1, 2017, one, seventy-seven, IV, MMXIV
+            "PART",  # particle                   ’s, not,
+            "PRON",  # pronoun                    I, you, he, she, myself, themselves, somebody
+            "PROPN",  # proper noun                Mary, John, London, NATO, HBO
+            "PUNCT",  # punctuation                ., (, ), ?
+            "SCONJ",  # subordinating conjunction  if, while, that
+            "SYM",  # symbol                     $, %, §, ©, +, −, ×, ÷, =, :), 😝
+            "VERB",  # verb                       run, runs, running, eat, ate, eating
+            "X",  # other                      sfpksdpsxmsa
+        ]
+        POS_MAPPING = {label_: index for index, label_ in enumerate(POS_LABELS)}
+
+        label_map = {label: i for i, label in enumerate(label_list)}
+        features = []
+        for (ex_index, example) in enumerate(examples):
+            if ex_index % 10000 == 0:
+                logger.info("Writing example %d of %d" % (ex_index, len(examples)))
+
+            tokens_a = []
+            pos_a = []
+            tokens_b = []
+            pos_b = []
+
+            doc1 = nlp(example.text_a)
+            for token in doc1:
+                t = tokenizer.tokenize(token.text)
+                tokens_a += t
+                pos_a += [POS_MAPPING[token.pos_]] * len(t)
+            if example.text_b:
+                doc2 = nlp(example.text_b)
+                for token in doc2:
+                    t = tokenizer.tokenize(token.text)
+                    tokens_b += t
+                    pos_b += [POS_MAPPING[token.pos_]] * len(t)
+                special_tokens_count = 4 if sep_token_extra else 3
+                _truncate_seq_pair(tokens_a, tokens_b, max_seq_length - special_tokens_count,pos_a,pos_b)
+
+            tokens = tokens_a + [sep_token]
+            mask_p1 = [1] * len(tokens_a) + [0]
+            mask_p2 = [0] * (len(tokens_a)+ 1)
+            pos_a += [19]
+            pos_b = [0]*(len(tokens_a)) + [19] + pos_b
+            if sep_token_extra and tokens_b is not None:
+                # roberta uses an extra separator b/w pairs of sentences
+                tokens += [sep_token]
+                mask_p1 += [0]
+                mask_p2 += [0]
+                pos_a += [0]
+                pos_b = [0] +pos_b
+            segment_ids = [sequence_a_segment_id] * len(tokens)
+
+            if tokens_b:
+                tokens += tokens_b + [sep_token]
+                pos_a += [0] * len(tokens_b) + [19]
+                pos_b += [19]
+                mask_p1 += [0] * (len(tokens_b)+ 1)
+                mask_p2 += [1] * len(tokens_b) + [0]
+                segment_ids += [sequence_b_segment_id] * (len(tokens_b) + 1)
+
+            if cls_token_at_end:
+                tokens = tokens + [cls_token]
+                mask_p2 += [0]
+                mask_p1 += [0]
+                pos_a += [19]
+                pos_b += [19]
+                segment_ids = segment_ids + [cls_token_segment_id]
+            else:
+                tokens = [cls_token] + tokens
+                mask_p2 = [0] + mask_p2
+                mask_p1 = [0] + mask_p1
+                pos_a = [19] + pos_a
+                pos_b = [19] + pos_b
+                segment_ids = [cls_token_segment_id] + segment_ids
+
+            input_ids = tokenizer.convert_tokens_to_ids(tokens)
+
+            # The mask has 1 for real tokens and 0 for padding tokens. Only real
+            # tokens are attended to.
+            input_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
+
+            # Zero-pad up to the sequence length.
+            padding_length = max_seq_length - len(input_ids)
+            if pad_on_left:
+                input_ids = ([pad_token] * padding_length) + input_ids
+                input_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + input_mask
+                segment_ids = ([pad_token_segment_id] * padding_length) + segment_ids
+                mask_p1 = [0] * padding_length + mask_p1
+                mask_p2 = [0] * padding_length + mask_p2
+                pos_a = [19] * padding_length + pos_a
+                pos_b = [19] * padding_length + pos_b
+            else:
+                input_ids = input_ids + ([pad_token] * padding_length)
+                input_mask = input_mask + ([0 if mask_padding_with_zero else 1] * padding_length)
+                segment_ids = segment_ids + ([pad_token_segment_id] * padding_length)
+                mask_p1 += [0] * padding_length
+                mask_p2 += [0] * padding_length
+                pos_a += [19] * padding_length
+                pos_b += [19] * padding_length
+
+            assert len(input_ids) == max_seq_length
+            assert len(input_mask) == max_seq_length
+            assert len(segment_ids) == max_seq_length
+            assert len(mask_p1) == max_seq_length
+            assert len(mask_p2) == max_seq_length
+            assert len(pos_a) == max_seq_length
+            assert len(pos_b) == max_seq_length
+
+            pos = [(pos_a[i]+pos_b[i]) if pos_a[i] != 19 else 19 for  i in range(len(pos_a))]
+
+            if output_mode == "classification":
+                label_id = label_map[example.label]
+            elif output_mode == "regression":
+                label_id = float(example.label)
+            else:
+                raise KeyError(output_mode)
+
+            features.append(
+                WicFratures(  input_ids=input_ids,
+                              input_mask=input_mask,
+                              segment_ids=segment_ids,
+                              label_id=label_id,
+                              mask_p1=mask_p1,
+                              mask_p2=mask_p2,
+                              pos = pos
+                              ))
+            if ex_index < 1:
+                logger.info("*** Example ***")
+                logger.info("guid: %s" % (example.guid))
+                logger.info("tokens: %s" % " ".join([str(x) for x in tokens]))
+                logger.info("input_ids: %s" % " ".join([str(x) for x in input_ids]))
+                logger.info("input_mask: %s" % " ".join([str(x) for x in input_mask]))
+                logger.info("segment_ids: %s" % " ".join([str(x) for x in segment_ids]))
+                logger.info("mask_p1: %s" % " ".join(str(x) for x in mask_p1))
+                logger.info("mask_p2: %s" % " ".join(str(x) for x in mask_p2))
+                logger.info("pos_a: %s" % " ".join(str(x) for x in pos_a))
+                logger.info("pos_b: %s" % " ".join(str(x) for x in pos_b))
+                logger.info("label: %s (id = %d)" % (example.label, label_id))
+
+        return features
+
+    elif is_mtc:
         features = []
         for example_index, example in enumerate(examples):
             premise_tokens = tokenizer.tokenize(example.premise)
@@ -384,7 +616,7 @@ def convert_examples_to_features(examples, label_list, max_seq_length,
                               input_mask=input_mask,
                               segment_ids=segment_ids,
                               label_id=label_id))
-            if ex_index < 0 and len(examples) > 300:
+            if ex_index < 1 :
                 logger.info("*** Example ***")
                 logger.info("guid: %s" % (example.guid))
                 logger.info("tokens: %s" % " ".join(
@@ -408,7 +640,7 @@ class CbProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         """See base class."""
         return self._create_examples(
-            self._read_jsonl(os.path.join(data_dir, "val.jsonl")), "val")
+            self._read_jsonl(os.path.join(data_dir, "test.jsonl")), "val")
 
     def get_labels(self):
         """See base class."""
@@ -512,7 +744,7 @@ class SWAGProcessor(DataProcessor):
             )
         return examples
 
-def _truncate_seq_pair(tokens_a, tokens_b, max_length):
+def _truncate_seq_pair(tokens_a, tokens_b, max_length , pos1=None ,pos2=None):
     """Truncates a sequence pair in place to the maximum length."""
 
     # This is a simple heuristic which will always truncate the longer sequence
@@ -525,8 +757,12 @@ def _truncate_seq_pair(tokens_a, tokens_b, max_length):
             break
         if len(tokens_a) > len(tokens_b):
             tokens_a.pop()
+            if pos1 is not None:
+                pos1.pop()
         else:
             tokens_b.pop()
+            if pos2 is not None:
+                pos2.pop()
 
 
 def simple_accuracy(preds, labels):
@@ -563,6 +799,8 @@ def compute_metrics(task_name, preds, labels):
         return {"acc": simple_accuracy(preds, labels)}
     elif task_name == "swag":
         return {"acc": simple_accuracy(preds, labels)}
+    elif task_name == "wic":
+        return {"acc": simple_accuracy(preds, labels)}
     else:
         raise KeyError(task_name)
 
@@ -572,6 +810,7 @@ processors = {
     "cb": CbProcessor,
     "copa": COPAProcessor,
     "swag":SWAGProcessor,
+    "wic":WiCProcessor,
 }
 
 output_modes = {
@@ -579,6 +818,7 @@ output_modes = {
     "cb": "classification",
     "copa": "classification",
     "swag":"classification",
+    "wic":"classification",
 }
 
 GLUE_TASKS_NUM_LABELS = {
@@ -586,6 +826,7 @@ GLUE_TASKS_NUM_LABELS = {
     "cb": 3,
     "copa": 2,
     "swag":4,
+    "wic":2,
 }
 
 def select_field(features, field):

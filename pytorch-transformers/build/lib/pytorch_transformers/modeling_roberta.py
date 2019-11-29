@@ -54,7 +54,7 @@ class RobertaEmbeddings(BertEmbeddings):
         super(RobertaEmbeddings, self).__init__(config)
         self.padding_idx = 1
 
-    def forward(self, input_ids, token_type_ids=None, position_ids=None):
+    def forward(self, input_ids, token_type_ids=None, position_ids=None,is_onehot=False):
         seq_length = input_ids.size(1)
         if position_ids is None:
             # Position numbers begin at padding_idx+1. Padding symbols are ignored.

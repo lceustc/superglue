@@ -14,9 +14,8 @@ from .tokenization_utils import (PreTrainedTokenizer)
 from .modeling_auto import (AutoConfig, AutoModel)
 
 from .modeling_bert import (BertConfig, BertPreTrainedModel, BertModel, BertForPreTraining,
-                            BertForMaskedLM, BertForNextSentencePrediction,
-                            BertForSequenceClassification, BertForMultipleChoice,
-                            BertForTokenClassification, BertForQuestionAnswering,
+                            BertForSequenceClassification, BertForMultipleChoice,BertForMaskedLM,
+                            BertForTokenClassification, BertForQuestionAnswering,BertForWic,
                             load_tf_weights_in_bert, BERT_PRETRAINED_MODEL_ARCHIVE_MAP,
                             BERT_PRETRAINED_CONFIG_ARCHIVE_MAP)
 from .modeling_openai import (OpenAIGPTConfig, OpenAIGPTPreTrainedModel, OpenAIGPTModel,

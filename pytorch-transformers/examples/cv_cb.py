@@ -135,6 +135,7 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
     train_iterator = trange(int(args.num_train_epochs), desc="Epoch", disable=args.local_rank not in [-1, 0])
     set_seed(args)  # Added here for reproductibility (even between python 2 and 3)
     ad = AdversarialTraining()
+    loss_fn = torch.nn.CrossEntropyLoss()
     for itera in train_iterator:
         epoch_iterator = tqdm(train_dataloader, desc="Iteration", disable=args.local_rank not in [-1, 0])
         data = None
@@ -144,7 +145,8 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
             inputs = {'input_ids':      batch[0],
                       'attention_mask': batch[1],
                       'token_type_ids': batch[2] if args.model_type in ['bert', 'xlnet'] else None,  # XLM don't use segment_ids
-                      'labels':         batch[3]}
+                      }
+            labels= batch[3]
             outputs = model(**inputs)
             if args.margin_loss and args.task_name in ["copa"]:
                 logits = model(**inputs)[1]
@@ -156,8 +158,8 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
                 f = torch.sub(args.alpha, f).cuda()
                 loss = torch.max(torch.tensor(0, dtype=f.dtype).cuda(), f).mean()
             else:
-                loss = outputs[0]  # model outputs are always tuple in pytorch-transformers (see doc)
-
+                # loss = outputs[0]  # model outputs are always tuple in pytorch-transformers (see doc)
+                loss = loss_fn(outputs[0],labels)
             if args.n_gpu > 1:
                 loss = loss.mean() # mean() to average on multi-gpu parallel training
             if args.gradient_accumulation_steps > 1:
@@ -171,16 +173,17 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
             if data is None:
-                data = [[inputs]]
+                data = [[inputs,labels]]
             else:
-                data.append([inputs])
+                data.append([inputs,labels])
 
             tr_loss += loss.item()
             if (step + 1) % args.gradient_accumulation_steps == 0:
                 if args.lstm_ad >0 :
                     ad.disturb(model,False)
-                    for inputs in data:
-                        ad_loss=model(**inputs[0])[0]
+                    for (inputs,label) in data:
+                        ad_logits=model(**inputs)[0]
+                        ad_loss = loss_fn(ad_logits,labels)
                         if args.n_gpu > 1:
                             ad_loss = loss.mean()
                         if args.gradient_accumulation_steps > 1:
@@ -193,6 +196,46 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
                             ad_loss.backward()
                             torch.nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
                     ad.restore(model)
+                if args.freeLB>0:
+                    n = (50265 * 1024) ** 0.5
+                    theta = (-args.epsilon - args.epsilon) * torch.rand([50265,1024],dtype=torch.float32) + args.epsilon
+                    theta = (theta/n).cuda()
+                    g = {}
+                    for i in range(args.K):
+                        ad.disturb(model, is_virtual=False, sigma=theta)
+                        for (inputs, labels) in data:
+                            outputs = model(**inputs)
+                            loss = loss_fn(outputs[0], labels)
+                            if args.n_gpu > 1:
+                                loss = loss.mean()  # mean() to average on multi-gpu parallel training
+                            if args.gradient_accumulation_steps > 1:
+                                loss = loss / args.gradient_accumulation_steps
+                            loss.backward()
+                        ad.restore(model, theta)
+                        for c, v in model.named_parameters():
+                            if v.requires_grad and v.grad is not None:
+                                if c not in g:
+                                    g[c] = v.grad / args.K
+                                else:
+                                    g[c] += v.grad / args.K
+                            if "word_embeddings" in c:
+                                g_adv = v.grad
+
+                        a = args.freeLB_alpha * g_adv
+                        b = a/torch.norm(g_adv,p="fro")
+                        theta = theta+b
+                        theta = torch.clamp(theta, -args.epsilon, args.epsilon)
+                        model.zero_grad()
+                    for c, v in model.named_parameters():
+                        if c in g:
+                            if v.grad is None:
+                                v.grad = g[c]
+                            else:
+                                v.grad.add_(g[c])
+                    del g, c, v, theta, g_adv;
+                    import gc;
+                    gc.collect()
+                    torch.cuda.empty_cache()
                 data = None
                 optimizer.step()
                 scheduler.step()  # Update learning rate schedule
@@ -211,6 +254,9 @@ def train(args, train_dataset, model, tokenizer,test_idx=None,prefix=None):
                 os.makedirs(output_dir)
             model_to_save = model.module if hasattr(model, 'module') else model  # Take care of distributed/parallel training
             model_to_save.save_pretrained(output_dir)
+        if 0 < args.max_steps <= global_step:
+            epoch_iterator.close()
+            break
 
     return global_step, tr_loss / global_step
 
@@ -458,6 +504,15 @@ def main():
                         help="random seed for initialization")
     parser.add_argument('--alpha', type=float, default=0.37,
                         help="random seed for initialization")
+    parser.add_argument('--freeLB', type=int, default=-1,
+                        help="random seed for initialization")
+    parser.add_argument('--K', type=int, default=3,
+                        help="random seed for initialization")
+    parser.add_argument('--freeLB_alpha', type=float, default=0.03,
+                        help="random seed for initialization")
+    parser.add_argument('--epsilon', type=float, default=0.15,
+                        help="random seed for initialization")
+
 
     parser.add_argument('--fp16', action='store_true',
                         help="Whether to use 16-bit (mixed) precision (through NVIDIA apex) instead of 32-bit")
@@ -517,7 +572,7 @@ def main():
 
     # Training
     if args.do_train:
-        train_examples = pd.read_csv('/data/lce/pytorch-transformers/data/'+str(args.task_name).upper()+'/train_all.tsv', sep='\t',header=None)
+        train_examples = pd.read_csv('/data/lce/pytorch-transformers/data/'+str(args.task_name).upper()+'/train.tsv', sep='\t',header=None if args.task_name in ["copa"] else 1)
         data1 = DataFrame(train_examples)
         skf = StratifiedKFold(n_splits=5)
         del train_examples

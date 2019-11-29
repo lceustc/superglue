@@ -24,6 +24,8 @@ import os
 import sys
 from io import open
 
+import torch.nn.functional as F
+from torch.autograd import Variable
 import torch
 from torch import nn
 from torch.nn import CrossEntropyLoss, MSELoss
@@ -253,15 +255,21 @@ class BertEmbeddings(nn.Module):
         self.LayerNorm = BertLayerNorm(config.hidden_size, eps=config.layer_norm_eps)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
 
-    def forward(self, input_ids, token_type_ids=None, position_ids=None):
+    def forward(self, input_ids, token_type_ids=None, position_ids=None,is_onehot=False):
         seq_length = input_ids.size(1)
         if position_ids is None:
             position_ids = torch.arange(seq_length, dtype=torch.long, device=input_ids.device)
-            position_ids = position_ids.unsqueeze(0).expand_as(input_ids)
+            if input_ids.dim() ==3:
+                position_ids = position_ids.unsqueeze(0).expand_as(input_ids[:,:,0])
+            else:
+                position_ids = position_ids.unsqueeze(0).expand_as(input_ids)
         if token_type_ids is None:
-            token_type_ids = torch.zeros_like(input_ids)
+                token_type_ids = torch.zeros_like(input_ids)
 
-        words_embeddings = self.word_embeddings(input_ids)
+        if is_onehot:
+            words_embeddings = torch.matmul(input_ids, self.word_embeddings.weight)
+        else:
+            words_embeddings = self.word_embeddings(input_ids)
         position_embeddings = self.position_embeddings(position_ids)
         token_type_embeddings = self.token_type_embeddings(token_type_ids)
 
@@ -677,9 +685,12 @@ class BertModel(BertPreTrainedModel):
         for layer, heads in heads_to_prune.items():
             self.encoder.layer[layer].attention.prune_heads(heads)
 
-    def forward(self, input_ids, token_type_ids=None, attention_mask=None, position_ids=None, head_mask=None):
+    def forward(self, input_ids, token_type_ids=None, attention_mask=None, position_ids=None, head_mask=None,is_onehot=False):
         if attention_mask is None:
-            attention_mask = torch.ones_like(input_ids)
+            if input_ids.dim() ==3 :
+                attention_mask = torch.ones_like(input_ids[:,:,0],dtype=torch.long)
+            else:
+                attention_mask = torch.ones_like(input_ids)
         if token_type_ids is None:
             token_type_ids = torch.zeros_like(input_ids)
 
@@ -713,8 +724,8 @@ class BertModel(BertPreTrainedModel):
         else:
             head_mask = [None] * self.config.num_hidden_layers
 
+        embedding_output = self.embeddings(input_ids, position_ids=position_ids, token_type_ids=token_type_ids,is_onehot=is_onehot)
 
-        embedding_output = self.embeddings(input_ids, position_ids=position_ids, token_type_ids=token_type_ids)
         encoder_outputs = self.encoder(embedding_output,
                                        extended_attention_mask,
                                        head_mask=head_mask)
@@ -852,9 +863,10 @@ class BertForMaskedLM(BertPreTrainedModel):
                                    self.bert.embeddings.word_embeddings)
 
     def forward(self, input_ids, token_type_ids=None, attention_mask=None, masked_lm_labels=None,
-                position_ids=None, head_mask=None):
+                position_ids=None, head_mask=None,is_onehot=False):
+
         outputs = self.bert(input_ids, position_ids=position_ids, token_type_ids=token_type_ids,
-                            attention_mask=attention_mask, head_mask=head_mask)
+                            attention_mask=attention_mask, head_mask=head_mask,is_onehot=is_onehot)
 
         sequence_output = outputs[0]
         prediction_scores = self.cls(sequence_output)
@@ -1245,3 +1257,47 @@ class BertForQuestionAnswering(BertPreTrainedModel):
 
         return outputs  # (loss), start_logits, end_logits, (hidden_states), (attentions)
 
+
+class BertForWic(BertPreTrainedModel):
+    def __init__(self, config):
+        super(BertForWic, self).__init__(config)
+        self.num_labels = config.num_labels
+        self.pos_embedding = nn.Embedding(20,config.hidden_size,padding_idx=19)
+        self.bert = BertModel(config)
+        self.classifier = nn.Linear(config.hidden_size * 3, self.config.num_labels)
+        self.max_pool = nn.MaxPool2d([128,1])
+        self.layer = BertLayer(config)
+        self.apply(self.init_weights)
+
+    def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None,
+                position_ids=None, head_mask=None, mask_p1=None, mask_p2=None,pos=None):
+
+        outputs = self.bert(input_ids, position_ids=position_ids, token_type_ids=token_type_ids,
+                            attention_mask=attention_mask, head_mask=head_mask)
+
+        pooled_output = outputs[0]
+
+        pos_embedding =self.pos_embedding(pos)
+        pooled_output += pos_embedding
+
+        att_mask = torch.ones_like(pooled_output[:,:,0],dtype=torch.long)
+        extended_attention_mask = att_mask.unsqueeze(1).unsqueeze(2)
+        extended_attention_mask = extended_attention_mask.to(dtype=next(self.parameters()).dtype)  # fp16 compatibility
+        extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0
+
+        hidden = self.layer(pooled_output,extended_attention_mask)[0]
+
+        sen1 = hidden * mask_p1.unsqueeze(-1).type_as(hidden)
+        sen2 = hidden * mask_p2.unsqueeze(-1).type_as(hidden)
+        pooled1 = self.max_pool(sen1)
+        pooled2 = self.max_pool(sen2)
+        tmp = torch.cat([torch.split(hidden,1,dim=1)[0],pooled1,pooled2],dim=-1)
+        logits = self.classifier(tmp).view(-1,self.num_labels)
+
+        outputs = (logits,) + outputs
+        if labels is not None:
+            loss_fct = CrossEntropyLoss()
+            loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+            outputs = (loss,) + outputs
+
+        return outputs  # (loss), logits, (hidden_states), (attentions)

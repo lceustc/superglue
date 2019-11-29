@@ -156,13 +156,13 @@ class RteProcessor(DataProcessor):
     def get_train_examples(self, data_dir,idx):
         """See base class."""
         return self._create_examples(
-            self._read_jsonl(os.path.join(data_dir, "train_all.jsonl")), "train",idx)
+            self._read_jsonl(os.path.join(data_dir, "train.jsonl")), "train",idx)
 
     def get_dev_examples(self, data_dir,idx,cv_train=False):
         """See base class."""
         if cv_train:
             return self._create_examples(
-                self._read_jsonl(os.path.join(data_dir, "train_all.jsonl")), "val", idx)
+                self._read_jsonl(os.path.join(data_dir, "train.jsonl")), "val", idx)
         else:
             return self._create_examples(
                 self._read_jsonl(os.path.join(data_dir, "val.jsonl")), "val", idx)
@@ -417,7 +417,7 @@ class CbProcessor(DataProcessor):
                 self._read_jsonl(os.path.join(data_dir, "train.jsonl")), "val",idx)
         else:
             return self._create_examples(
-                self._read_jsonl(os.path.join(data_dir, "val.jsonl")), "val", idx)
+                self._read_jsonl(os.path.join(data_dir, "test.jsonl")), "val", idx)
 
     def get_labels(self):
         """See base class."""

@@ -159,9 +159,10 @@ def train(args, train_dataset, model, tokenizer):
                 loss = torch.max(torch.tensor(0, dtype=f.dtype).cuda(), f).mean()
             else:
                 outputs = model(**inputs)
-                logits = outputs[0]
-                loss = crossEntropyLoss(logits,labels.view(-1))# model outputs are always tuple in pytorch-transformers (see doc)
 
+                loss = outputs[0]
+                # logits = outputs[0]
+                # loss = crossEntropyLoss(logits,labels.view(-1))# model outputs are always tuple in pytorch-transformers (see doc)
             if args.n_gpu > 1:
                 loss = loss.mean() # mean() to average on multi-gpu parallel training
             if args.gradient_accumulation_steps > 1:
@@ -276,7 +277,7 @@ def train(args, train_dataset, model, tokenizer):
                 epoch_iterator.close()
                 break
         #!!!!!!!!!!!!!!!!
-        # results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
+        results = evaluate(args, model, tokenizer, prefix=str(args.seed) + "-" + str(global_step))
         #!!!!!!!!!!!!!!!!!
 
         if 0 < args.max_steps < global_step:
